@@ -7,9 +7,34 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "eslint": "eslint 'src/**/*.{astro,ts,tsx}'",
+    "fix:eslint": "eslint 'src/**/*.{astro,ts,tsx}' --fix",
+    "format": "prettier 'src/**/*.{astro,ts,tsx,md,css}' --write",
+    "prepare": "husky install",
+    "stylelint": "stylelint 'src/**/*.{astro,css}'",
+    "fix:stylelint": "stylelint 'src/**/*.{astro,css}' --fix"
   },
   "dependencies": {
     "astro": "^2.1.7"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint": "^8.37.0",
+    "eslint-plugin-astro": "^0.26.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.0",
+    "postcss-html": "^1.5.0",
+    "prettier": "^2.8.7",
+    "prettier-plugin-astro": "^0.8.0",
+    "stylelint": "^15.4.0",
+    "stylelint-config-standard": "^32.0.0"
+  },
+  "lint-staged": {
+    "src/**/*.{astro,ts,tsx}": "eslint --fix",
+    "src/**/*.{astro,ts,tsx,md,css}": "prettier --write",
+    "src/**/*.{astro,css}": "stylelint --fix"
   }
 }
