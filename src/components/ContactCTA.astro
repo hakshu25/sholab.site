@@ -30,11 +30,10 @@ import Icon from './Icon.astro';
     max-width: 15ch;
   }
 
-  @media (min-width: 50em) {
+  @media (width >= 50em) {
     aside {
       padding: 7.5rem;
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-flow: row wrap;
       justify-content: space-between;
     }
 

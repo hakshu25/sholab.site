@@ -134,10 +134,10 @@ const { Content } = await entry.render();
   .back-link:focus,
   .content :global(a:hover),
   .content :global(a:focus) {
-    text-decoration-color: currentColor;
+    text-decoration-color: currentcolor;
   }
 
-  @media (min-width: 50em) {
+  @media (width >= 50em) {
     .back-link {
       display: block;
       align-self: flex-start;

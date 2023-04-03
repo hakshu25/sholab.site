@@ -106,10 +106,10 @@ import Hero from '../components/Hero.astro';
 
   .content :global(a:hover),
   .content :global(a:focus) {
-    text-decoration-color: currentColor;
+    text-decoration-color: currentcolor;
   }
 
-  @media (min-width: 50em) {
+  @media (width >= 50em) {
     .about {
       display: grid;
       grid-template-columns: 1fr 60% 1fr;
