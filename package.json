@@ -10,7 +10,8 @@
     "astro": "astro",
     "eslint": "eslint 'src/**/*.{astro,ts,tsx}'",
     "fix:eslint": "eslint 'src/**/*.{astro,ts,tsx}' --fix",
-    "format": "prettier 'src/**/*.{astro,ts,tsx,md,css}' --write",
+    "format": "prettier 'src/**/*.{astro,ts,md,css}' --write",
+    "check:format": "prettier src/**/*.{astro,ts,md,css} --check",
     "prepare": "husky install",
     "stylelint": "stylelint 'src/**/*.{astro,css}'",
     "fix:stylelint": "stylelint 'src/**/*.{astro,css}' --fix"
