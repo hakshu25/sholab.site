@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "eslint": "eslint 'src/**/*.{astro,ts,tsx}'",
-    "fix:eslint": "eslint 'src/**/*.{astro,ts,tsx}' --fix"
+    "fix:eslint": "eslint 'src/**/*.{astro,ts,tsx}' --fix",
+    "format": "prettier 'src/**/*.{astro,ts,tsx,md,css}' --write"
   },
   "dependencies": {
     "astro": "^2.1.7"
