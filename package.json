@@ -10,7 +10,8 @@
     "astro": "astro",
     "eslint": "eslint 'src/**/*.{astro,ts,tsx}'",
     "fix:eslint": "eslint 'src/**/*.{astro,ts,tsx}' --fix",
-    "format": "prettier 'src/**/*.{astro,ts,tsx,md,css}' --write"
+    "format": "prettier 'src/**/*.{astro,ts,tsx,md,css}' --write",
+    "prepare": "husky install"
   },
   "dependencies": {
     "astro": "^2.1.7"
@@ -21,7 +22,13 @@
     "eslint": "^8.37.0",
     "eslint-plugin-astro": "^0.26.1",
     "eslint-plugin-jsx-a11y": "^6.7.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.0",
     "prettier": "^2.8.7",
     "prettier-plugin-astro": "^0.8.0"
+  },
+  "lint-staged": {
+    "src/**/*.{astro,ts,tsx}": "eslint --fix",
+    "src/**/*.{astro,ts,tsx,md,css}": "prettier --write"
   }
 }
