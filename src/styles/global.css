@@ -68,7 +68,7 @@
   /* Fonts */
   --font-system: system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI',
     roboto, oxygen, ubuntu, cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --font-body: 'Public Sans', var(--font-system);
+  --font-body: 'Roboto', var(--font-system);
   --font-brand: rubik, var(--font-system);
 
   /* Transitions */
@@ -147,7 +147,9 @@ img {
 }
 
 a {
-  color: var(--link-color);
+  /* color: var(--link-color); */
+  color: blue;
+  text-decoration: none;
 }
 
 h1,

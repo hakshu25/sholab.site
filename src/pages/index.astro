@@ -1,260 +1,345 @@
 ---
-import { getCollection } from 'astro:content';
-
+import { Icon } from 'astro-icon';
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
-
-// Component Imports
-import CallToAction from '../components/CallToAction.astro';
-import Grid from '../components/Grid.astro';
-import Hero from '../components/Hero.astro';
-import Icon from '../components/Icon.astro';
-import Pill from '../components/Pill.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
-
-// Page section components
-import ContactCTA from '../components/ContactCTA.astro';
-import Skills from '../components/Skills.astro';
-
-// Content Fetching: List four most recent work projects
-const projects = (await getCollection('work'))
-  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
-  .slice(0, 4);
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
 ---
 
 <BaseLayout>
-  <div class="stack gap-20 lg:gap-48">
-    <div class="wrapper stack gap-8 lg:gap-20">
-      <header class="hero">
-        <Hero
-          title="Hello, my name is Jeanine White"
-          tagline="I am a Creative Developer who is currently based in Portland, Oregon."
-          align="start"
-        >
-          <div class="roles">
-            <Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-            <Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-            <Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
+  <div>
+    <header class="nav-header">
+      <img src="/assets/logo.png" width="120px" height="120px" alt="翔ラボのロゴ"/>
+      <nav>
+        <ul class="nav-items">
+          <li class="nav-item"><a href="#about">About</a></li>
+          <li class="nav-item"><a href="#experience">Experience</a></li>
+          <li class="nav-item"><a href="#skills">Skills</a></li>
+          <li class="nav-item"><a href="#services">Services</a></li>
+          <li class="nav-item"><a href="#works">Works</a></li>
+          <li class="nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="top-container">
+          <div class="top-message">
+            <h1>Webの力で<br>未来に羽ばたく</h1>
+            <p class="text-secondary">I'm a web developer.</p>
           </div>
-        </Hero>
-
-        <img
-          alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
-          width="480"
-          height="620"
-          src="/assets/portrait.jpg"
-        />
-      </header>
-
-      <Skills />
-    </div>
-
-    <main class="wrapper stack gap-20 lg:gap-48">
-      <section class="section with-background with-cta">
-        <header class="section-header stack gap-2 lg:gap-4">
-          <h3>Selected Work</h3>
-          <p>
-            Take a look below at some of my featured work for clients from the
-            past few years.
-          </p>
-        </header>
-
-        <div class="gallery">
-          <Grid variant="offset">
-            {
-              projects.map((project) => (
-                <li>
-                  <PortfolioPreview project={project} />
-                </li>
-              ))
-            }
-          </Grid>
-        </div>
-
-        <div class="cta">
-          <CallToAction href="/work/">
-            View All
-            <Icon icon="arrow-right" size="1.2em" />
-          </CallToAction>
+      </div>
+      <section class="section">
+        <h2 id="about" class="section-title">About</h2>
+        <div class="about-contents">
+          <img src="/assets/logo.png" width="240px" height="240px" alt="翔ラボのロゴ" />
+          <p class="description">フリーランスのWebエンジニア。新卒でソフトウェア開発に携わり始め、受託開発会社・教育系事業会社で約5年Webを中心としたサービス開発に従事して参りました。フロントエンド開発に関心が強いですが、フロントエンドからサーバーサイド、クラウドにおけるIaCを主としたアプリケーションのインフラ構築まで幅広く取り組んできております。</p>
         </div>
       </section>
-
-      <section class="section with-background bg-variant">
-        <header class="section-header stack gap-2 lg:gap-4">
-          <h3>Mentions</h3>
-          <p>
-            I have been fortunate enough to recieve praise for my work in
-            several publications. Take a look below to learn more.
-          </p>
-        </header>
-
-        <div class="gallery">
-          <Grid variant="small">
-            {
-              [
-                'Medium',
-                'BuzzFeed',
-                'The Next Web',
-                'awwwards.',
-                'TechCrunch',
-              ].map((brand) => (
-                <li class="mention-card">
-                  <p>{brand}</p>
-                </li>
-              ))
-            }
-          </Grid>
+      <section class="section">
+        <h2 id="experience" class="section-title">Experience</h2>
+        <div class="description experience-wrapper">
+          <p>主に以下開発をこれまで経験してきました。</p>
+          <ul>
+            <li>開発/移行</li>
+            <ul>
+              <li>スクラム開発でのWebサービス新規機能開発</li>
+              <li>アプリケーションデプロイ、実行環境の移行(AWS EC2 & CodeDeploy → ECS & CircleCI)</li>
+              <li>PHPからRubyへの書き換え</li>
+              <li>Ruby on RailsやAngular、jQueryのメジャーバージョンアップ</li>
+              <li>GA導入</li>
+            </ul>
+            <li>改善</li>
+            <ul>
+              <li>Docker導入での開発環境改善</li>
+              <li>CIの実行時間改善</li>
+            </ul>
+          </ul>
+          <p>その他詳細な経歴は<a href="https://github.com/flyhighair/Curriculum-Vitae" target="_blank" rel="noopener">こちら</a>をご覧ください。</p>
+        </div>
+      </section>
+      <section class="section">
+        <h2 id="skills" class="section-title">Skills</h2>
+        <div class="skills-container">
+          <ul class="skills-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>Ruby</li>
+            <li>Git</li>
+            <li>Docker</li>
+            <li>Terraform</li>
+            <li>AWS</li>
+            <li>Next.js</li>
+            <li>React</li>
+            <li>Angular</li>
+            <li>Ruby on Rails</li>
+          </ul>
+        </div>
+      </section>
+      <section class="section">
+        <h2 id="services" class="section-title">Services</h2>
+        <div class="service-container">
+          <div class="service-wrapper">
+            <img src="/assets/service-1.png" alt="HTML/CSSのコード">
+            <div class="service">
+              <h3>HTML/CSSコーディング</h3>
+              <p class="description">ご用意いただいたデザインを元に、適切なコーディングを行います。</p>
+            </div>
+          </div>
+          <div class="service-wrapper">
+            <img src="/assets/service-2.png" alt="PCに向かっている男">
+            <div class="service">
+              <h3>Webサービス開発</h3>
+              <p class="description">スクラムを始めとしたチーム開発に従事いたします。実装だけでなく、運用保守や自動テストの追加、課題解決にも取り組みます。</p>
+            </div>
+          </div>
+          <div class="service-wrapper">
+            <img src="/assets/service-3.png" alt="メンテナンスを行っている姿">
+            <div class="service">
+              <h3>フレームワークバージョンアップ作業</h3>
+              <p class="description">RailsやAngularなどフレームワークのバージョンアップ作業を行います。</p>
+            </div>
+          </div>
+          <div class="service-wrapper">
+            <img src="/assets/service-4.jpg" width="314px" height="185px" alt="螺旋階段">
+            <div class="service">
+              <h3>CI/CD改善</h3>
+              <p class="description">キャッシュによる実行時間の改善やフローの改善を行います。</p>
+            </div>
+          </div>
+          <div class="service-wrapper">
+            <img src="/assets/service-5.jpg" width="314px" height="185px" alt="コンテナを積んだタンカー">
+            <div class="service">
+              <h3>開発環境改善</h3>
+              <p class="description">Dockerなどを使い、開発環境の課題改善を行います。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <h2 id="works" class="section-title">Works</h2>
+        <div class="work-card-list">
+          <a href="/work/hoge" >
+            <div class="work-card">
+              <img src="/assets/service-5.jpg" class="work-image" alt="制作物">
+              <h5 class="work-title">GitHub Repo Search</h5>
+            </div>
+          </a>
+          <a href="/work/hoge" >
+            <div class="work-card">
+              <img src="/assets/service-5.jpg" class="work-image" alt="制作物">
+              <h5 class="work-title">翔ラボポートフォリオ</h5>
+            </div>
+          </a>
+          <a href="/work/hoge" >
+            <div class="work-card">
+              <img src="/assets/service-5.jpg" class="work-image" alt="制作物">
+              <h5 class="work-title">翔ラボブログ</h5>
+            </div>
+          </a>
+          <a href="/work/hoge" >
+            <div class="work-card">
+              <img src="/assets/service-5.jpg" class="work-image" alt="制作物">
+              <h5 class="work-title">solargraph-docker</h5>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="section">
+        <h2 id="contact" class="section-title">Contact</h2>
+        <div class="contact-container">
+          <p class="description">興味を持った方は以下フォームもしくはSNSのDMにてお問い合わせください。</p>
+          <p>※フォームはスパム対策のためGoogleアカウントでのログインが必要となります。ご了承ください。</p>
+          <div class="contact-link">
+            <a href="https://forms.gle/tNx7wpq9uM73xW3k6" target="_blank" rel="noopener">お問い合わせフォームへ<Icon name="octicon:link-external-16" class="contact-icon" width="26px" height="26px"></Icon></a>
+          </div>
+          <div class="icon-wrapper">
+            <a href="https://twitter.com" target="_blank" rel="noopener"><Icon name="ph:twitter-logo-fill" width="40px" height="40px"></Icon></a>
+            <a href="https://github.com/flyhighair" target="_blank" rel="noopener"><Icon name="ion:logo-github" class="github-icon" width="40px" height="40px"></Icon></a>
+          </div>
         </div>
       </section>
     </main>
-
-    <ContactCTA />
-  </div>
+    <footer class="footer">
+      <small>© 2023 翔ラボ</small>
+    </footer>
+    </div>
 </BaseLayout>
 
 <style>
-  .hero {
+  .nav-header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    padding: 1rem;
+    background-color: rgb(170 160 170 / 80%);
+    height: 80px;
+    position: sticky;
+    top: 0;
   }
 
-  .roles {
-    display: none;
+  .nav-items {
+    display: flex;
+    justify-content: space-between;
   }
 
-  .hero img {
-    aspect-ratio: 5 / 4;
-    object-fit: cover;
-    object-position: top;
-    border-radius: 1.5rem;
-    box-shadow: var(--shadow-md);
+  .nav-item {
+    padding: 10px;
+    list-style: none;
   }
 
-  @media (width >= 50em) {
-    .hero {
-      display: grid;
-      grid-template-columns: 6fr 4fr;
-      padding-inline: 2.5rem;
-      gap: 3.75rem;
-    }
-
-    .roles {
-      margin-top: 0.5rem;
-      display: flex;
-      gap: 0.5rem;
-    }
-
-    .hero img {
-      aspect-ratio: 3 / 4;
-      border-radius: 4.5rem;
-      object-fit: cover;
-    }
+  .nav-item > a {
+    text-decoration: none;
+      color: #000;
   }
 
-  /* ====================================================== */
+  .top-container {
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-image: url('/assets/top-image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+  }
+
+  .top-message {
+    text-align: left;
+    margin-left: 24px;
+  }
 
   .section {
-    display: grid;
-    gap: 2rem;
+    margin-top: 48px;
   }
 
-  .with-background {
-    position: relative;
-  }
-
-  .with-background::before {
-    --hero-bg: var(--bg-image-subtle-2);
-
-    content: '';
-    position: absolute;
-    pointer-events: none;
-    left: 50%;
-    width: 100vw;
-    aspect-ratio: calc(2.25 / var(--bg-scale));
-    top: 0;
-    transform: translateY(-75%) translateX(-50%);
-    background: url('/assets/backgrounds/noise.png') top center/220px repeat,
-      var(--hero-bg) center center / var(--bg-gradient-size) no-repeat,
-      var(--gray-999);
-    background-blend-mode: overlay, normal, normal, normal;
-    mix-blend-mode: var(--bg-blend-mode);
-    z-index: -1;
-  }
-
-  .with-background.bg-variant::before {
-    --hero-bg: var(--bg-image-subtle-1);
-  }
-
-  .section-header {
-    justify-self: center;
+  .section-title {
     text-align: center;
-    max-width: 50ch;
-    font-size: var(--text-md);
-    color: var(--gray-300);
   }
 
-  .section-header h3 {
-    font-size: var(--text-2xl);
-  }
-
-  @media (width >= 50em) {
-    .section {
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
-      gap: 5rem;
-    }
-
-    .section.with-cta {
-      grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
-    }
-
-    .section-header {
-      grid-area: header;
-      font-size: var(--text-lg);
-    }
-
-    .section-header h3 {
-      font-size: var(--text-4xl);
-    }
-
-    .with-cta .section-header {
-      justify-self: flex-start;
-      text-align: left;
-    }
-
-    .gallery {
-      grid-area: gallery;
-    }
-
-    .cta {
-      grid-area: cta;
-    }
-  }
-
-  /* ====================================================== */
-
-  .mention-card {
+  .about-contents {
     display: flex;
-    height: 7rem;
     justify-content: center;
+    justify-items: start;
     align-items: center;
-    text-align: center;
-    border: 1px solid var(--gray-800);
-    border-radius: 1.5rem;
-    color: var(--gray-300);
-    background: var(--gradient-subtle);
-    box-shadow: var(--shadow-sm);
+    margin: 8px 64px
   }
 
-  @media (width >= 50em) {
-    .mention-card {
-      border-radius: 1.5rem;
-      height: 9.5rem;
-    }
+  .description {
+    font-size: 24px;
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .icon-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 16px;
+  }
+
+  .experience-wrapper {
+    width: 70%;
+    margin: 48px auto;
+  }
+
+  .skills-container {
+    font-size: 24px;
+    margin: 24px 36px;
+  }
+
+  .skills-list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(6, 120px);
+    column-gap: 60px;
+    row-gap: 10px;
+  }
+
+  .skills-list > li {
+    list-style: none;
+    background-color: #F1F1E6;
+    width: 160px;
+    text-align: center;
+    border-radius: 6px;
+  }
+
+  .service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+    align-items: center;
+    column-gap: 24px;
+    row-gap: 12px;
+    margin: 0 36px;
+  }
+
+  .service-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 24px 0;
+  }
+
+  .service {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+  }
+
+  .service > h3 {
+    margin-bottom: 8px;
+    text-decoration: underline 0.3em rgb(178 190 234 / 40%);
+    text-underline-offset: -0.2em;
+    text-decoration-skip-ink: none;
+  }
+
+  .work-card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    align-items: center;
+    gap: 2rem;
+    margin: 24px 36px;
+  }
+
+  .work-card {
+    width: 400px;
+    background: #fff;
+    border-radius: 2em;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .work-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+  }
+
+  .work-title {
+    padding: 12px;
+  }
+
+  .contact-container {
+    margin: 24px 36px;
+    text-align: center;
+  }
+
+  .contact-link {
+    margin-top: 24px;
+    font-size: 24px;
+  }
+
+  .contact-icon {
+    position: relative;
+    top: 4px;
+  }
+
+  .footer {
+    text-align: center;
+    margin: 36px 0;
   }
 </style>
