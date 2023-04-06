@@ -1,0 +1,40 @@
+---
+interface Props {
+  imgSrc: string;
+  imgAlt: string;
+  title: string;
+  description: string;
+}
+
+const { imgSrc, imgAlt, title, description } = Astro.props;
+---
+
+<div class="container">
+  <img src={imgSrc} alt={imgAlt} width="314" height="185" />
+  <div class="service">
+    <h3 class="title">{title}</h3>
+    <p class="description">
+      {description}
+    </p>
+  </div>
+</div>
+
+<style>
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .service {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+  }
+
+  .title {
+    margin-bottom: 8px;
+    text-decoration: underline 0.3em rgb(178 190 234 / 40%);
+    text-underline-offset: -0.2em;
+    text-decoration-skip-ink: none;
+  }
+</style>
