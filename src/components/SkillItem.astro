@@ -1,0 +1,19 @@
+---
+interface Props {
+  skill: string;
+}
+
+const { skill } = Astro.props;
+---
+
+<li class="item">{skill}</li>
+
+<style>
+  .item {
+    list-style: none;
+    background-color: #f1f1e6;
+    width: 160px;
+    text-align: center;
+    border-radius: 6px;
+  }
+</style>

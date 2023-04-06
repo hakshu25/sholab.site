@@ -1,0 +1,54 @@
+---
+import Work from './Work.astro';
+
+interface WorkInfo {
+  link: string;
+  imgSrc: string;
+  imgAlt: string;
+  title: string;
+}
+
+const workList: WorkInfo[] = [
+  {
+    link: '/work/hoge',
+    imgSrc: '/assets/service-5.jpg',
+    imgAlt: '制作物',
+    title: 'GitHub Repo Search',
+  },
+  {
+    link: '/work/hoge',
+    imgSrc: '/assets/service-5.jpg',
+    imgAlt: '制作物',
+    title: '翔ラボポートフォリオ',
+  },
+  {
+    link: '/work/hoge',
+    imgSrc: '/assets/service-5.jpg',
+    imgAlt: '制作物',
+    title: '翔ラボブログ',
+  },
+  {
+    link: '/work/hoge',
+    imgSrc: '/assets/service-5.jpg',
+    imgAlt: '制作物',
+    title: 'solargraph-docker',
+  },
+];
+---
+
+<div class="list">
+  {
+    workList.map(({ link, imgSrc, imgAlt, title }) => (
+      <Work link={link} imgSrc={imgSrc} imgAlt={imgAlt} title={title} />
+    ))
+  }
+</div>
+
+<style>
+  .list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    align-items: center;
+    gap: 2rem;
+  }
+</style>

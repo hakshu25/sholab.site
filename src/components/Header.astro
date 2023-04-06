@@ -1,0 +1,45 @@
+---
+import Logo from './Logo.astro';
+---
+
+<header class="nav-header">
+  <Logo width={120} height={120} />
+  <nav>
+    <ul class="nav-items">
+      <li class="nav-item"><a href="#about">About</a></li>
+      <li class="nav-item"><a href="#experience">Experience</a></li>
+      <li class="nav-item"><a href="#skills">Skills</a></li>
+      <li class="nav-item"><a href="#services">Services</a></li>
+      <li class="nav-item"><a href="#works">Works</a></li>
+      <li class="nav-item"><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgb(170 160 170 / 80%);
+    height: 80px;
+    position: sticky;
+    top: 0;
+  }
+
+  .nav-items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-item {
+    padding: 10px;
+    list-style: none;
+  }
+
+  .nav-item > a {
+    text-decoration: none;
+    color: #000;
+  }
+</style>

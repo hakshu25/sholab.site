@@ -1,0 +1,73 @@
+---
+import Service from './Service.astro';
+
+const serviceList: {
+  imgSrc: string;
+  imgAlt: string;
+  title: string;
+  description: string;
+}[] = [
+  {
+    imgSrc: '/assets/service-1.png',
+    imgAlt: 'HTML/CSSのコード',
+    title: 'HTML/CSSコーディング',
+    description:
+      'ご用意いただいたデザインを元に、適切なコーディングを行います。',
+  },
+  {
+    imgSrc: '/assets/service-2.png',
+    imgAlt: 'PCに向かっている男',
+    title: 'Webサービス開発',
+    description:
+      'スクラムを始めとしたチーム開発に従事いたします。実装だけでなく、運用保守や自動テストの追加、課題解決にも取り組みます。',
+  },
+  {
+    imgSrc: '/assets/service-3.png',
+    imgAlt: 'メンテナンスを行っている姿',
+    title: 'フレームワークバージョンアップ作業',
+    description:
+      'RailsやAngularなどフレームワークのバージョンアップ作業を行います。',
+  },
+  {
+    imgSrc: '/assets/service-4.jpg',
+    imgAlt: '螺旋階段',
+    title: 'CI/CD改善',
+    description: 'キャッシュによる実行時間の改善やフローの改善を行います。',
+  },
+  {
+    imgSrc: '/assets/service-5.jpg',
+    imgAlt: 'コンテナを積んだタンカー',
+    title: '開発環境改善',
+    description: 'Dockerなどを使い、開発環境の課題改善を行います。',
+  },
+];
+---
+
+<div class="container">
+  {
+    serviceList.map(({ imgSrc, imgAlt, title, description }) => (
+      <div class="wrapper">
+        <Service
+          imgSrc={imgSrc}
+          imgAlt={imgAlt}
+          title={title}
+          description={description}
+        />
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+    align-items: center;
+    column-gap: 24px;
+    row-gap: 12px;
+  }
+
+  .wrapper {
+    margin: 24px 0;
+  }
+</style>

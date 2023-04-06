@@ -1,0 +1,10 @@
+---
+interface Props {
+  width: number;
+  height: number;
+}
+
+const { width, height } = Astro.props;
+---
+
+<img src="/assets/logo.png" width={width} height={height} alt="翔ラボのロゴ" />

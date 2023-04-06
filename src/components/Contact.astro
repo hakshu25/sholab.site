@@ -1,0 +1,38 @@
+---
+import { Icon } from 'astro-icon';
+---
+
+<div class="container">
+  <p class="description">
+    興味を持った方は以下フォームもしくはSNSのDMにてお問い合わせください。
+  </p>
+  <p>
+    ※フォームはスパム対策のためGoogleアカウントでのログインが必要となります。ご了承ください。
+  </p>
+  <div class="link">
+    <a href="https://forms.gle/tNx7wpq9uM73xW3k6" target="_blank" rel="noopener"
+      >お問い合わせフォームへ<Icon
+        name="octicon:link-external-16"
+        class="icon"
+        width="26px"
+        height="26px"
+      /></a
+    >
+  </div>
+</div>
+
+<style>
+  .container {
+    text-align: center;
+  }
+
+  .link {
+    margin-top: 24px;
+    font-size: 24px;
+  }
+
+  .icon {
+    position: relative;
+    top: 4px;
+  }
+</style>
