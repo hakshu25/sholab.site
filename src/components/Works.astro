@@ -1,60 +1,55 @@
 ---
+import Work from './Work.astro';
+
+interface WorkInfo {
+  link: string;
+  imgSrc: string;
+  imgAlt: string;
+  title: string;
+}
+
+const workList: WorkInfo[] = [
+  {
+    link: '/work/hoge',
+    imgSrc: '/assets/service-5.jpg',
+    imgAlt: '制作物',
+    title: 'GitHub Repo Search',
+  },
+  {
+    link: '/work/hoge',
+    imgSrc: '/assets/service-5.jpg',
+    imgAlt: '制作物',
+    title: '翔ラボポートフォリオ',
+  },
+  {
+    link: '/work/hoge',
+    imgSrc: '/assets/service-5.jpg',
+    imgAlt: '制作物',
+    title: '翔ラボブログ',
+  },
+  {
+    link: '/work/hoge',
+    imgSrc: '/assets/service-5.jpg',
+    imgAlt: '制作物',
+    title: 'solargraph-docker',
+  },
+];
 ---
 
-<div class="work-card-list">
-  <a href="/work/hoge">
-    <div class="work-card">
-      <img src="/assets/service-5.jpg" class="work-image" alt="制作物" />
-      <h5 class="work-title">GitHub Repo Search</h5>
-    </div>
-  </a>
-  <a href="/work/hoge">
-    <div class="work-card">
-      <img src="/assets/service-5.jpg" class="work-image" alt="制作物" />
-      <h5 class="work-title">翔ラボポートフォリオ</h5>
-    </div>
-  </a>
-  <a href="/work/hoge">
-    <div class="work-card">
-      <img src="/assets/service-5.jpg" class="work-image" alt="制作物" />
-      <h5 class="work-title">翔ラボブログ</h5>
-    </div>
-  </a>
-  <a href="/work/hoge">
-    <div class="work-card">
-      <img src="/assets/service-5.jpg" class="work-image" alt="制作物" />
-      <h5 class="work-title">solargraph-docker</h5>
-    </div>
-  </a>
+<div class="list">
+  {
+    workList.map(({ link, imgSrc, imgAlt, title }) => (
+      <Work link={link} imgSrc={imgSrc} imgAlt={imgAlt} title={title} />
+    ))
+  }
 </div>
 
 <style>
-  .work-card-list {
+  .list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     align-items: center;
     gap: 2rem;
     margin: 24px 36px;
-  }
-
-  .work-card {
-    width: 400px;
-    background: #fff;
-    border-radius: 2em;
-    box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
-    text-align: center;
-    overflow: hidden;
-  }
-
-  .work-image {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    border: 0;
-  }
-
-  .work-title {
-    padding: 12px;
   }
 </style>
