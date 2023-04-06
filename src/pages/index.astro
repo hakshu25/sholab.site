@@ -16,77 +16,47 @@ import Footer from '../components/Footer.astro';
   <Header />
   <main>
     <TopImage />
-    <section class="section">
-      <h2 id="about" class="section-title">About</h2>
-      <div class="about-container">
+    <div class="info-container">
+      <section class="section">
+        <h2 id="about" class="section-title">About</h2>
         <AboutMe />
-      </div>
-    </section>
-    <section class="section">
-      <h2 id="experience" class="section-title">Experience</h2>
-      <div class="experience-container">
+      </section>
+      <section class="section">
+        <h2 id="experience" class="section-title">Experience</h2>
         <Experience />
-      </div>
-    </section>
-    <section class="section">
-      <h2 id="skills" class="section-title">Skills</h2>
-      <div class="skills-container">
+      </section>
+      <section class="section">
+        <h2 id="skills" class="section-title">Skills</h2>
         <Skills />
-      </div>
-    </section>
-    <section class="section">
-      <h2 id="services" class="section-title">Services</h2>
-      <div class="services-container">
+      </section>
+      <section class="section">
+        <h2 id="services" class="section-title">Services</h2>
         <Services />
-      </div>
-    </section>
-    <section class="section">
-      <h2 id="works" class="section-title">Works</h2>
-      <div class="works-container">
+      </section>
+      <section class="section">
+        <h2 id="works" class="section-title">Works</h2>
         <Works />
-      </div>
-    </section>
-    <section class="section">
-      <h2 id="contact" class="section-title">Contact</h2>
-      <div class="contact-container">
+      </section>
+      <section class="section">
+        <h2 id="contact" class="section-title">Contact</h2>
         <Contact />
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
   <Footer />
 </BaseLayout>
 
 <style>
   .section {
-    margin-top: 48px;
+    margin-bottom: 96px;
   }
 
   .section-title {
     text-align: center;
+    margin-bottom: 24px;
   }
 
-  .about-container {
-    margin: 8px 64px;
-  }
-
-  .experience-container {
-    width: 70%;
-    margin: 48px auto;
-  }
-
-  .skills-container {
-    margin: 24px 36px;
-  }
-
-  .services-container {
-    margin: 0 36px;
-  }
-
-  .works-container {
-    margin: 24px 36px;
-  }
-
-  .contact-container {
-    margin: 24px 36px;
+  .info-container {
+    margin: 48px 64px;
   }
 </style>
