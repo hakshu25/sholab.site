@@ -1,0 +1,90 @@
+---
+---
+
+<div class="service-container">
+  <div class="service-wrapper">
+    <img src="/assets/service-1.png" alt="HTML/CSSのコード" />
+    <div class="service">
+      <h3>HTML/CSSコーディング</h3>
+      <p class="description">
+        ご用意いただいたデザインを元に、適切なコーディングを行います。
+      </p>
+    </div>
+  </div>
+  <div class="service-wrapper">
+    <img src="/assets/service-2.png" alt="PCに向かっている男" />
+    <div class="service">
+      <h3>Webサービス開発</h3>
+      <p class="description">
+        スクラムを始めとしたチーム開発に従事いたします。実装だけでなく、運用保守や自動テストの追加、課題解決にも取り組みます。
+      </p>
+    </div>
+  </div>
+  <div class="service-wrapper">
+    <img src="/assets/service-3.png" alt="メンテナンスを行っている姿" />
+    <div class="service">
+      <h3>フレームワークバージョンアップ作業</h3>
+      <p class="description">
+        RailsやAngularなどフレームワークのバージョンアップ作業を行います。
+      </p>
+    </div>
+  </div>
+  <div class="service-wrapper">
+    <img
+      src="/assets/service-4.jpg"
+      width="314px"
+      height="185px"
+      alt="螺旋階段"
+    />
+    <div class="service">
+      <h3>CI/CD改善</h3>
+      <p class="description">
+        キャッシュによる実行時間の改善やフローの改善を行います。
+      </p>
+    </div>
+  </div>
+  <div class="service-wrapper">
+    <img
+      src="/assets/service-5.jpg"
+      width="314px"
+      height="185px"
+      alt="コンテナを積んだタンカー"
+    />
+    <div class="service">
+      <h3>開発環境改善</h3>
+      <p class="description">
+        Dockerなどを使い、開発環境の課題改善を行います。
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+    align-items: center;
+    column-gap: 24px;
+    row-gap: 12px;
+    margin: 0 36px;
+  }
+
+  .service-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 24px 0;
+  }
+
+  .service {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+  }
+
+  .service > h3 {
+    margin-bottom: 8px;
+    text-decoration: underline 0.3em rgb(178 190 234 / 40%);
+    text-underline-offset: -0.2em;
+    text-decoration-skip-ink: none;
+  }
+</style>

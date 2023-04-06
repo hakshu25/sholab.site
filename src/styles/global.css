@@ -274,3 +274,7 @@ h5 {
     gap: 12rem;
   }
 }
+
+.description {
+  font-size: 24px;
+}
