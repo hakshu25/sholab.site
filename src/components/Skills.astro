@@ -1,21 +1,26 @@
 ---
+import SkillItem from './SkillItem.astro';
+
+const skills = [
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'TypeScript',
+  'Ruby',
+  'Git',
+  'Docker',
+  'Terraform',
+  'AWS',
+  'Next.js',
+  'React',
+  'Angular',
+  'Ruby on Rails',
+];
 ---
 
 <div class="container">
   <ul class="list">
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-    <li>TypeScript</li>
-    <li>Ruby</li>
-    <li>Git</li>
-    <li>Docker</li>
-    <li>Terraform</li>
-    <li>AWS</li>
-    <li>Next.js</li>
-    <li>React</li>
-    <li>Angular</li>
-    <li>Ruby on Rails</li>
+    {skills.map((skill) => <SkillItem skill={skill} />)}
   </ul>
 </div>
 
@@ -31,13 +36,5 @@
     grid-template-columns: repeat(6, 120px);
     column-gap: 60px;
     row-gap: 10px;
-  }
-
-  .list > li {
-    list-style: none;
-    background-color: #f1f1e6;
-    width: 160px;
-    text-align: center;
-    border-radius: 6px;
   }
 </style>
