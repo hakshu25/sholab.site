@@ -147,9 +147,14 @@ img {
 }
 
 a {
-  /* color: var(--link-color); */
-  color: blue;
+  color: #11c;
   text-decoration: none;
+  text-underline-offset: 0.1em;
+  transition: 0.2s ease-out;
+}
+
+a:hover {
+  opacity: 0.5;
 }
 
 h1,
