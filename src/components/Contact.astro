@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon';
+import ExternalLink from './ExternalLink.astro';
 ---
 
 <div class="container">
@@ -10,14 +11,14 @@ import { Icon } from 'astro-icon';
     ※フォームはスパム対策のためGoogleアカウントでのログインが必要となります。ご了承ください。
   </p>
   <div class="link">
-    <a href="https://forms.gle/tNx7wpq9uM73xW3k6" target="_blank" rel="noopener"
-      >お問い合わせフォームへ<Icon
+    <ExternalLink link="https://forms.gle/tNx7wpq9uM73xW3k6">
+      お問い合わせフォームへ<Icon
         name="octicon:link-external-16"
         class="icon"
         width="26px"
         height="26px"
-      /></a
-    >
+      />
+    </ExternalLink>
   </div>
 </div>
 

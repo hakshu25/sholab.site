@@ -1,4 +1,5 @@
 ---
+import ExternalLink from './ExternalLink.astro';
 import Icon from './Icon.astro';
 const currentYear = new Date().getFullYear();
 ---
@@ -6,16 +7,16 @@ const currentYear = new Date().getFullYear();
 <footer>
   <div class="group">
     <p>
-      Developed with <a href="https://astro.build/">Astro</a>
+      Developed with <ExternalLink link="https://astro.build/">
+        Astro
+      </ExternalLink>
       <Icon icon="rocket-launch" size="1.2em" />
     </p>
     <p>&copy; {currentYear} 翔ラボ</p>
   </div>
   <p class="socials">
-    <a href="https://twitter.com/me" target="_blank" rel="noopener"> Twitter</a>
-    <a href="https://github.com/flyhighair" target="_blank" rel="noopener">
-      GitHub</a
-    >
+    <ExternalLink link="https://twitter.com/me">Twitter</ExternalLink>
+    <ExternalLink link="https://github.com/flyhighair">GitHub</ExternalLink>
   </p>
 </footer>
 <style>
