@@ -11,7 +11,7 @@ const { link, imgSrc, imgAlt, title } = Astro.props;
 
 <a href={link}>
   <div class="card">
-    <img src={imgSrc} class="image" alt={imgAlt} />
+    <img src={imgSrc} class="image" alt={imgAlt} loading="lazy" />
     <h5 class="title">{title}</h5>
   </div>
 </a>
