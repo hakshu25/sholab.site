@@ -45,3 +45,25 @@ import Logo from './Logo.astro';
     color: #000;
   }
 </style>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (this: Element, e) {
+      e.preventDefault();
+
+      const attr = this.getAttribute('href');
+      if (attr === null) {
+        return;
+      }
+
+      const target = document.querySelector(attr);
+      if (target === null) {
+        return;
+      }
+
+      target.scrollIntoView({
+        behavior: 'smooth',
+      });
+    });
+  });
+</script>

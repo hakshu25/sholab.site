@@ -13,8 +13,8 @@ const { imgSrc, imgAlt, title, description } = Astro.props;
   <img
     src={imgSrc}
     alt={imgAlt}
-    width="314"
-    height="185"
+    width="320"
+    height="180"
     class="image"
     loading="lazy"
   />
@@ -35,6 +35,7 @@ const { imgSrc, imgAlt, title, description } = Astro.props;
   .image {
     border-radius: 8px;
     box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+    aspect-ratio: 16 / 9;
   }
 
   .service {

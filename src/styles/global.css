@@ -139,11 +139,11 @@ body {
 *::before {
   box-sizing: border-box;
   margin: 0;
+  scroll-margin-top: 80px;
 }
 
 img {
   max-width: 100%;
-  height: auto;
 }
 
 a {
