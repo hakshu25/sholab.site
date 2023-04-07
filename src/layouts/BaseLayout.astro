@@ -3,6 +3,7 @@
 // https://docs.astro.build/en/core-concepts/layouts/
 
 // Component Imports
+import Loading from '../components/Loading.astro';
 import MainHead from '../components/MainHead.astro';
 
 interface Props {
@@ -18,15 +19,26 @@ const { title, description } = Astro.props;
     <MainHead title={title} description={description} />
   </head>
   <body>
-    <div class="stack backgrounds">
+    <div id="loading" class="loading">
+      <Loading />
+    </div>
+    <div id="main" class="stack backgrounds">
       <slot />
     </div>
 
     <script>
       // Add “loaded” class once the document has completely loaded.
-      addEventListener('load', () =>
-        document.documentElement.classList.add('loaded')
-      );
+      addEventListener('load', () => {
+        document.documentElement.classList.add('loaded');
+        const loadingEl = document.getElementById('loading');
+        const mainEl = document.getElementById('main');
+        if (loadingEl) {
+          loadingEl.classList.add('load-completed');
+        }
+        if (mainEl) {
+          mainEl.classList.add('loaded-contents');
+        }
+      });
     </script>
 
     <style>
@@ -89,6 +101,20 @@ const { title, description } = Astro.props;
         }
       }
 
+      @keyframes load {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .loaded-contents {
+        animation: load 2s;
+      }
+
       .backgrounds {
         min-height: 100%;
         isolation: isolate;
@@ -115,6 +141,26 @@ const { title, description } = Astro.props;
 
           --bg-gradient-size: none;
         }
+      }
+
+      .loading {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transition: all 1s;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        background-color: antiquewhite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .load-completed {
+        opacity: 0;
+        visibility: hidden;
       }
     </style>
   </body>
