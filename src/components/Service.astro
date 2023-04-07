@@ -10,7 +10,7 @@ const { imgSrc, imgAlt, title, description } = Astro.props;
 ---
 
 <div class="container">
-  <img src={imgSrc} alt={imgAlt} width="314" height="185" />
+  <img src={imgSrc} alt={imgAlt} width="314" height="185" class="image" />
   <div class="service">
     <h3 class="title">{title}</h3>
     <p class="description">
@@ -23,6 +23,11 @@ const { imgSrc, imgAlt, title, description } = Astro.props;
   .container {
     display: flex;
     align-items: center;
+  }
+
+  .image {
+    border-radius: 8px;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
   }
 
   .service {
