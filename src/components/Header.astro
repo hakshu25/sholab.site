@@ -28,6 +28,12 @@ import Logo from './Logo.astro';
     top: 0;
     backdrop-filter: saturate(180%) blur(5px);
     border-bottom: 1px solid rgb(0 0 0 / 10%);
+    transition: transform 0.3s ease-out;
+  }
+
+  .hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in;
   }
 
   .nav-items {
@@ -47,6 +53,8 @@ import Logo from './Logo.astro';
 </style>
 
 <script>
+  import { throttle } from 'lodash';
+
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', function (this: Element, e) {
       e.preventDefault();
@@ -66,4 +74,29 @@ import Logo from './Logo.astro';
       });
     });
   });
+
+  /**
+   * ヘッダーの表示・非表示をスクロール時に切り替える
+   */
+  const toggleHeaderOnScroll = () => {
+    const header = document.querySelector('.nav-header');
+    let lastScrollPosition = 0;
+
+    if (header !== null) {
+      const scrollHandler = () => {
+        const currentScrollPosition = window.pageYOffset;
+        if (currentScrollPosition < lastScrollPosition) {
+          // 上にスクロール中
+          header.classList.remove('hidden');
+        } else {
+          // 下にスクロール中
+          header.classList.add('hidden');
+        }
+        lastScrollPosition = currentScrollPosition;
+      };
+      // 負荷を極端にかけないようにスクロール時の処理を遅延させる
+      window.addEventListener('scroll', throttle(scrollHandler, 500));
+    }
+  };
+  toggleHeaderOnScroll();
 </script>
