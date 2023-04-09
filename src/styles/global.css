@@ -123,6 +123,7 @@
 html,
 body {
   height: 100%;
+  width: 100vw;
 }
 
 body {
@@ -138,7 +139,6 @@ body {
 *::before {
   box-sizing: border-box;
   margin: 0;
-  scroll-margin-top: 80px;
 }
 
 img {
