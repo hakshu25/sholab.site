@@ -132,6 +132,9 @@ body {
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
+
+  /** 1rem = 16px 0px ~ 750px で 16 ~ 24 px を可変にする */
+  font-size: clamp(1rem, 1vw + 1rem, 1.5rem);
 }
 
 *,
@@ -277,8 +280,4 @@ h5 {
   .lg\:gap-48 {
     gap: 12rem;
   }
-}
-
-.description {
-  font-size: 24px;
 }
