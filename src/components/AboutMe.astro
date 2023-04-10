@@ -11,9 +11,16 @@ import Logo from './Logo.astro';
 
 <style>
   .container {
-    display: flex;
-    justify-content: center;
-    justify-items: start;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    justify-items: center;
     align-items: center;
+  }
+
+  @media (width <= 1024px) {
+    .container {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
   }
 </style>
