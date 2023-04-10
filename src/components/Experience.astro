@@ -5,22 +5,16 @@ import ExternalLink from './ExternalLink.astro';
 <div class="container">
   <p>主に以下開発をこれまで経験してきました。</p>
   <ul>
-    <li>開発/移行</li>
-    <ul>
-      <li>スクラム開発でのWebサービス新規機能開発</li>
-      <li>
-        アプリケーションデプロイ、実行環境の移行(AWS EC2 & CodeDeploy → ECS &
-        CircleCI)
-      </li>
-      <li>PHPからRubyへの書き換え</li>
-      <li>Ruby on RailsやAngular、jQueryのメジャーバージョンアップ</li>
-      <li>GA導入</li>
-    </ul>
-    <li>改善</li>
-    <ul>
-      <li>Docker導入での開発環境改善</li>
-      <li>CIの実行時間改善</li>
-    </ul>
+    <li>スクラム開発でのWebサービス新規機能開発</li>
+    <li>
+      アプリケーションデプロイ、実行環境の移行(AWS EC2 & CodeDeploy → ECS &
+      CircleCI)
+    </li>
+    <li>PHPからRubyへの書き換え</li>
+    <li>Ruby on RailsやAngular、jQueryのメジャーバージョンアップ</li>
+    <li>Sidekiqを使った非同期Worker導入</li>
+    <li>Docker導入での開発環境改善</li>
+    <li>CIの実行時間改善</li>
   </ul>
   <p>
     その他詳細な経歴は<ExternalLink
@@ -34,5 +28,11 @@ import ExternalLink from './ExternalLink.astro';
 <style>
   .container {
     padding: 0 96px;
+  }
+
+  @media (width <= 1024px) {
+    .container {
+      padding: 0 8px;
+    }
   }
 </style>
