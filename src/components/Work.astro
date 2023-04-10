@@ -1,4 +1,6 @@
 ---
+import ExternalLink from './ExternalLink.astro';
+
 interface Props {
   link: string;
   imgName: string;
@@ -9,7 +11,7 @@ interface Props {
 const { link, imgName, imgAlt, title } = Astro.props;
 ---
 
-<a href={link}>
+<ExternalLink link={link}>
   <div class="card">
     <picture>
       <src
@@ -25,7 +27,7 @@ const { link, imgName, imgAlt, title } = Astro.props;
     />
     <h5 class="title">{title}</h5>
   </div>
-</a>
+</ExternalLink>
 
 <style>
   .card {
