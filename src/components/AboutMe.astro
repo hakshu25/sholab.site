@@ -1,9 +1,20 @@
 ---
-import Logo from './Logo.astro';
 ---
 
 <div class="container">
-  <Logo width={240} height={240} />
+  <picture>
+    <source
+      srcset="/assets/logo_70x70.png"
+      type="image/png"
+      media="(max-width: 640px)"
+    />
+    <source
+      srcset="/assets/logo_120x120.png"
+      type="image/png"
+      media="(max-width: 1024px)"
+    />
+    <img src="/assets/logo_180x180.png" alt="翔ラボのロゴ" />
+  </picture>
   <p>
     フリーランスのWebエンジニア。新卒でソフトウェア開発に携わり始め、受託開発会社・教育系事業会社で約5年Webを中心としたサービス開発に従事して参りました。フロントエンド開発に関心が強いですが、フロントエンドからサーバーサイド、クラウドにおけるIaCを主としたアプリケーションのインフラ構築まで幅広く取り組んできております。
   </p>
