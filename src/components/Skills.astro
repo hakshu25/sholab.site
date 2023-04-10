@@ -26,14 +26,25 @@ const skills = [
 
 <style>
   .container {
-    font-size: 24px;
+    container-type: inline-size;
   }
 
   .list {
     display: grid;
+    grid-template-columns: repeat(auto-fit, 160px);
     justify-content: center;
-    grid-template-columns: repeat(6, 120px);
-    column-gap: 60px;
-    row-gap: 10px;
+    column-gap: 16px;
+    row-gap: 16px;
+    padding: 0;
+  }
+
+  @container (max-width: 640px) {
+    .list {
+      display: grid;
+      grid-template-columns: repeat(2, 160px);
+      justify-content: center;
+      column-gap: 8px;
+      row-gap: 8px;
+    }
   }
 </style>

@@ -8,35 +8,35 @@ const serviceList: {
   description: string;
 }[] = [
   {
-    imgSrc: '/assets/services/service-1.jpg',
+    imgSrc: '/assets/services/service-html.png',
     imgAlt: 'HTML/CSSのコード',
-    title: 'HTML/CSSコーディング',
+    title: 'HTML/CSS/JavaScriptコーディング',
     description:
       'ご用意いただいたデザインを元に、適切なコーディングを行います。',
   },
   {
-    imgSrc: '/assets/services/service-2.jpg',
-    imgAlt: 'PCに向かっている男',
+    imgSrc: '/assets/services/service-webdevelop.png',
+    imgAlt: 'プログラミングしている男のイラスト',
     title: 'Webサービス開発',
     description:
       'スクラムを始めとしたチーム開発に従事いたします。実装だけでなく、運用保守や自動テストの追加、課題解決にも取り組みます。',
   },
   {
-    imgSrc: '/assets/services/service-3.jpg',
-    imgAlt: 'メンテナンスを行っている姿',
+    imgSrc: '/assets/services/service-update.png',
+    imgAlt: 'アップデートしているイラスト',
     title: 'フレームワークバージョンアップ作業',
     description:
       'RailsやAngularなどフレームワークのバージョンアップ作業を行います。',
   },
   {
-    imgSrc: '/assets/services/service-4.jpg',
-    imgAlt: '螺旋階段',
+    imgSrc: '/assets/services/service-cicd.png',
+    imgAlt: 'ロケットが打ち上がるイラスト',
     title: 'CI/CD改善',
     description: 'キャッシュによる実行時間の改善やフローの改善を行います。',
   },
   {
-    imgSrc: '/assets/services/service-5.jpg',
-    imgAlt: 'コンテナを積んだタンカー',
+    imgSrc: '/assets/services/service-docker.png',
+    imgAlt: 'コンテナを積んだタンカーのイラスト',
     title: '開発環境改善',
     description: 'Dockerなどを使い、開発環境の課題改善を行います。',
   },
@@ -61,7 +61,7 @@ const serviceList: {
 <style>
   .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     align-items: center;
     column-gap: 24px;
     row-gap: 12px;
@@ -69,5 +69,15 @@ const serviceList: {
 
   .wrapper {
     margin: 24px 0;
+  }
+
+  @media (width <= 768px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+
+    .wrapper {
+      margin: 12px 0;
+    }
   }
 </style>

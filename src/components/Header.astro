@@ -1,18 +1,28 @@
 ---
-import Logo from './Logo.astro';
+import { Icon } from 'astro-icon';
 ---
 
 <header class="nav-header">
-  <Logo width={120} height={120} />
-  <nav>
-    <ul class="nav-items">
-      <li class="nav-item"><a href="#about">About</a></li>
-      <li class="nav-item"><a href="#experience">Experience</a></li>
-      <li class="nav-item"><a href="#skills">Skills</a></li>
-      <li class="nav-item"><a href="#services">Services</a></li>
-      <li class="nav-item"><a href="#works">Works</a></li>
-      <li class="nav-item"><a href="#contact">Contact</a></li>
-    </ul>
+  <div class="menu-icons">
+    <picture>
+      <source
+        srcset="/assets/logo_50x50.png"
+        type="image/png"
+        media="(max-width: 640px)"
+      />
+      <img src="/assets/logo_70x70.png" alt="翔ラボのロゴ" />
+    </picture>
+    <button id="menu-button" class="menu-button"
+      ><Icon name="tabler:menu-2" /></button
+    >
+  </div>
+  <nav class="nav-items">
+    <a href="#about" class="nav-item">About</a>
+    <a href="#experience" class="nav-item">Experience</a>
+    <a href="#skills" class="nav-item">Skills</a>
+    <a href="#services" class="nav-item">Services</a>
+    <a href="#works" class="nav-item">Works</a>
+    <a href="#contact" class="nav-item">Contact</a>
   </nav>
 </header>
 
@@ -24,7 +34,6 @@ import Logo from './Logo.astro';
     padding: 1rem;
     background-color: rgb(255 255 255 / 90%);
     height: 80px;
-    position: sticky;
     top: 0;
     backdrop-filter: saturate(180%) blur(5px);
     border-bottom: 1px solid rgb(0 0 0 / 10%);
@@ -38,23 +47,66 @@ import Logo from './Logo.astro';
 
   .nav-items {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    width: 100%;
+    font-size: 1rem;
   }
 
   .nav-item {
     padding: 10px;
     list-style: none;
+    text-decoration: none;
+    color: var(--gray-200);
   }
 
-  .nav-item > a {
-    text-decoration: none;
-    color: #000;
+  .menu-button {
+    display: none;
+  }
+
+  @media screen and (width <= 640px) {
+    .nav-header {
+      flex-direction: column;
+      height: auto;
+      width: 100vw;
+    }
+
+    .menu-icons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .nav-items {
+      display: none;
+    }
+
+    .nav-items.shown {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      height: auto;
+      font-size: 1.5rem;
+      padding: 0;
+    }
+
+    .nav-items.shown > .nav-item {
+      padding: 20px;
+      border-top: 1px solid rgb(0 0 0 / 10%);
+    }
+
+    .menu-button {
+      display: block;
+      width: 50px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
   }
 </style>
 
 <script>
-  import { throttle } from 'lodash';
-
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', function (this: Element, e) {
       e.preventDefault();
@@ -69,34 +121,40 @@ import Logo from './Logo.astro';
         return;
       }
 
+      const navItems = document.querySelector('.nav-items');
+      if (navItems !== null && navItems.classList.contains('shown')) {
+        closeMenu(navItems);
+      }
       target.scrollIntoView({
         behavior: 'smooth',
       });
     });
   });
 
-  /**
-   * ヘッダーの表示・非表示をスクロール時に切り替える
-   */
-  const toggleHeaderOnScroll = () => {
-    const header = document.querySelector('.nav-header');
-    let lastScrollPosition = 0;
+  const openMenu = (menu: Element) => {
+    menu.classList.add('shown');
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+  };
+  const closeMenu = (menu: Element) => {
+    menu.classList.remove('shown');
+    document.body.style.overflow = '';
+    document.body.style.position = '';
+  };
 
-    if (header !== null) {
-      const scrollHandler = () => {
-        const currentScrollPosition = window.pageYOffset;
-        if (currentScrollPosition < lastScrollPosition) {
-          // 上にスクロール中
-          header.classList.remove('hidden');
-        } else {
-          // 下にスクロール中
-          header.classList.add('hidden');
-        }
-        lastScrollPosition = currentScrollPosition;
-      };
-      // 負荷を極端にかけないようにスクロール時の処理を遅延させる
-      window.addEventListener('scroll', throttle(scrollHandler, 500));
+  const toggleMenu = () => {
+    const navItems = document.querySelector('.nav-items');
+    if (navItems !== null) {
+      if (navItems.classList.contains('shown')) {
+        closeMenu(navItems);
+      } else {
+        openMenu(navItems);
+      }
     }
   };
-  toggleHeaderOnScroll();
+
+  const menuBtn = document.getElementById('menu-button');
+  if (menuBtn !== null) {
+    menuBtn.addEventListener('click', toggleMenu);
+  }
 </script>

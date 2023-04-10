@@ -10,17 +10,10 @@ const { imgSrc, imgAlt, title, description } = Astro.props;
 ---
 
 <div class="container">
-  <img
-    src={imgSrc}
-    alt={imgAlt}
-    width="320"
-    height="180"
-    class="image"
-    loading="lazy"
-  />
+  <img src={imgSrc} alt={imgAlt} width="320" height="276" loading="lazy" />
   <div class="service">
     <h3 class="title">{title}</h3>
-    <p class="description">
+    <p>
       {description}
     </p>
   </div>
@@ -30,12 +23,7 @@ const { imgSrc, imgAlt, title, description } = Astro.props;
   .container {
     display: flex;
     align-items: center;
-  }
-
-  .image {
-    border-radius: 8px;
-    box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
-    aspect-ratio: 16 / 9;
+    word-break: break-all;
   }
 
   .service {
@@ -49,5 +37,28 @@ const { imgSrc, imgAlt, title, description } = Astro.props;
     text-decoration: underline 0.3em rgb(178 190 234 / 40%);
     text-underline-offset: -0.2em;
     text-decoration-skip-ink: none;
+  }
+
+  @media (width <= 768px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .service {
+      align-items: center;
+      margin-left: 0;
+    }
+
+    .service > p {
+      font-size: 1.2rem;
+    }
+
+    .title {
+      font-size: 1.6rem;
+    }
+
+    .image {
+      margin-bottom: 12px;
+    }
   }
 </style>
