@@ -44,4 +44,12 @@ const { link, imgSrc, imgAlt, title } = Astro.props;
   .title {
     padding: 12px;
   }
+
+  @media (width <= 640px) {
+    .card {
+      width: 200px;
+      height: 200px;
+      border-radius: 1em;
+    }
+  }
 </style>
