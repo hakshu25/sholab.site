@@ -1,21 +1,25 @@
 ---
 interface Props {
   link: string;
-  imgSrc: string;
+  imgName: string;
   imgAlt: string;
   title: string;
 }
 
-const { link, imgSrc, imgAlt, title } = Astro.props;
+const { link, imgName, imgAlt, title } = Astro.props;
 ---
 
 <a href={link}>
   <div class="card">
+    <picture>
+      <src
+        srcset={`assets/works/${imgName}-sm.png`}
+        type="image/png"
+        media="(max-width: 640px)"></src>
+    </picture>
     <img
-      src={imgSrc}
+      src={`assets/works/${imgName}-md.png`}
       class="image"
-      width="400"
-      height="240"
       alt={imgAlt}
       loading="lazy"
     />
@@ -38,7 +42,6 @@ const { link, imgSrc, imgAlt, title } = Astro.props;
     padding: 0;
     border: 0;
     border-bottom: 1px solid #eee;
-    aspect-ratio: 1/1;
   }
 
   .title {
@@ -47,7 +50,7 @@ const { link, imgSrc, imgAlt, title } = Astro.props;
 
   @media (width <= 640px) {
     .card {
-      width: 200px;
+      width: 240px;
       height: 200px;
       border-radius: 1em;
     }

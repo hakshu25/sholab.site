@@ -3,7 +3,7 @@ import Work from './Work.astro';
 
 interface WorkInfo {
   link: string;
-  imgSrc: string;
+  imgName: string;
   imgAlt: string;
   title: string;
 }
@@ -11,25 +11,25 @@ interface WorkInfo {
 const workList: WorkInfo[] = [
   {
     link: '/work/hoge',
-    imgSrc: '/assets/works/portfolio.png',
+    imgName: 'portfolio',
     imgAlt: 'このサイトのスクリーンショット',
     title: 'このサイト',
   },
   {
     link: '/work/hoge',
-    imgSrc: '/assets/works/github-repo-search.png',
+    imgName: 'github-repo-search',
     imgAlt: 'GitHub Repo Search',
     title: 'GitHub Repo Search',
   },
   {
     link: '/work/hoge',
-    imgSrc: '/assets/works/blog.png',
+    imgName: 'blog',
     imgAlt: 'ブログ',
     title: 'ブログ',
   },
   {
     link: '/work/hoge',
-    imgSrc: '/assets/works/solargraph-docker.png',
+    imgName: 'solargraph-docker',
     imgAlt: 'solargraph-docker',
     title: 'solargraph-docker',
   },
@@ -38,8 +38,8 @@ const workList: WorkInfo[] = [
 
 <div class="list">
   {
-    workList.map(({ link, imgSrc, imgAlt, title }) => (
-      <Work link={link} imgSrc={imgSrc} imgAlt={imgAlt} title={title} />
+    workList.map(({ link, imgName, imgAlt, title }) => (
+      <Work link={link} imgName={imgName} imgAlt={imgAlt} title={title} />
     ))
   }
 </div>
