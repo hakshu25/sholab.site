@@ -21,21 +21,16 @@ import ExternalLink from './ExternalLink.astro';
 
   .link {
     margin-top: 24px;
-    font-size: 24px;
-  }
-
-  .icon {
-    position: relative;
-    top: 4px;
+    font-size: var(--text-xl);
   }
 
   @media (width <= 640px) {
     .container {
-      font-size: 1.2rem;
+      font-size: var(--text-lg);
     }
 
     .link {
-      font-size: 1.2rem;
+      font-size: var(--text-lg);
     }
   }
 </style>
