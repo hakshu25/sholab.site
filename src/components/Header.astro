@@ -16,7 +16,7 @@ import { Icon } from 'astro-icon';
       ><Icon name="tabler:menu-2" /></button
     >
   </div>
-  <nav class="nav-items">
+  <nav id="menu" class="nav-items">
     <a href="#about" class="nav-item">About</a>
     <a href="#experience" class="nav-item">Experience</a>
     <a href="#skills" class="nav-item">Skills</a>
@@ -107,8 +107,33 @@ import { Icon } from 'astro-icon';
 </style>
 
 <script>
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener('click', function (this: Element, e) {
+  const toggleMenu = () => {
+    const menu = document.getElementById('menu');
+    if (menu === null) {
+      return;
+    }
+
+    if (menu.classList.contains('shown')) {
+      closeMenu(menu);
+    } else {
+      openMenu(menu);
+    }
+  };
+
+  const openMenu = (menu: Element) => {
+    menu.classList.add('shown');
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+  };
+
+  const closeMenu = (menu: Element) => {
+    menu.classList.remove('shown');
+    document.body.style.overflow = '';
+    document.body.style.position = '';
+  };
+
+  document.querySelectorAll('a[href^="#"]').forEach((anchor: Element) => {
+    anchor.addEventListener('click', function (this: Element, e: Event) {
       e.preventDefault();
 
       const attr = this.getAttribute('href');
@@ -121,37 +146,15 @@ import { Icon } from 'astro-icon';
         return;
       }
 
-      const navItems = document.querySelector('.nav-items');
-      if (navItems !== null && navItems.classList.contains('shown')) {
-        closeMenu(navItems);
+      const menu = document.getElementById('menu');
+      if (menu !== null && menu.classList.contains('shown')) {
+        closeMenu(menu);
       }
       target.scrollIntoView({
         behavior: 'smooth',
       });
     });
   });
-
-  const openMenu = (menu: Element) => {
-    menu.classList.add('shown');
-    document.body.style.overflow = 'hidden';
-    document.body.style.position = 'fixed';
-  };
-  const closeMenu = (menu: Element) => {
-    menu.classList.remove('shown');
-    document.body.style.overflow = '';
-    document.body.style.position = '';
-  };
-
-  const toggleMenu = () => {
-    const navItems = document.querySelector('.nav-items');
-    if (navItems !== null) {
-      if (navItems.classList.contains('shown')) {
-        closeMenu(navItems);
-      } else {
-        openMenu(navItems);
-      }
-    }
-  };
 
   const menuBtn = document.getElementById('menu-button');
   if (menuBtn !== null) {
