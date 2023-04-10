@@ -61,7 +61,7 @@ const serviceList: {
 <style>
   .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     align-items: center;
     column-gap: 24px;
     row-gap: 12px;
@@ -69,5 +69,15 @@ const serviceList: {
 
   .wrapper {
     margin: 24px 0;
+  }
+
+  @media (width <= 768px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+
+    .wrapper {
+      margin: 12px 0;
+    }
   }
 </style>

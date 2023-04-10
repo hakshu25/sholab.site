@@ -50,4 +50,27 @@ const { imgSrc, imgAlt, title, description } = Astro.props;
     text-underline-offset: -0.2em;
     text-decoration-skip-ink: none;
   }
+
+  @media (width <= 768px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .service {
+      align-items: center;
+      margin-left: 0;
+    }
+
+    .service > p {
+      font-size: 1.2rem;
+    }
+
+    .title {
+      font-size: 1.6rem;
+    }
+
+    .image {
+      margin-bottom: 12px;
+    }
+  }
 </style>
