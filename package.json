@@ -14,7 +14,8 @@
     "check:format": "prettier src/**/*.{astro,ts,md,css} --check",
     "prepare": "husky install",
     "stylelint": "stylelint 'src/**/*.{astro,css}'",
-    "fix:stylelint": "stylelint 'src/**/*.{astro,css}' --fix"
+    "fix:stylelint": "stylelint 'src/**/*.{astro,css}' --fix",
+    "lint:html": "markuplint 'src/**/*.astro'"
   },
   "dependencies": {
     "astro": "^2.1.7",
@@ -41,6 +42,7 @@
   "lint-staged": {
     "src/**/*.{astro,ts,tsx}": "eslint --fix",
     "src/**/*.{astro,ts,tsx,md,css}": "prettier --write",
-    "src/**/*.{astro,css}": "stylelint --fix"
+    "src/**/*.{astro,css}": "stylelint --fix",
+    "src/**/*.astro": "markuplint"
   }
 }

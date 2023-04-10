@@ -1,40 +1,39 @@
 ---
+import '../styles/global.css';
 import Loading from '../components/Loading.astro';
-import MainHead from '../components/MainHead.astro';
 
 interface Props {
   title?: string | undefined;
   description?: string | undefined;
 }
 
-const { title, description } = Astro.props;
+const { title = '翔ラボ', description = 'The portfolio site of 翔ラボ' } =
+  Astro.props;
 ---
 
 <html lang="ja">
   <head>
-    <MainHead title={title} description={description} />
-  </head>
-  <body>
-    <div id="loading" class="loading">
-      <Loading />
-    </div>
-    <div id="main">
-      <slot />
-    </div>
+    <meta charset="UTF-8" />
+    <meta name="description" property="og:description" content={description} />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
 
-    <script>
-      addEventListener('load', () => {
-        const loadingEl = document.getElementById('loading');
-        const mainEl = document.getElementById('main');
-        if (loadingEl) {
-          loadingEl.classList.add('load-completed');
-        }
-        if (mainEl) {
-          mainEl.classList.add('loaded-contents');
-        }
-      });
-    </script>
-
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      href="/icons/apple-touch-icon-180x180.png"
+    />
+    <link rel="icon" type="image/png" href="/icons/icon-192x192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
       @keyframes load {
         0% {
@@ -70,5 +69,26 @@ const { title, description } = Astro.props;
         visibility: hidden;
       }
     </style>
+  </head>
+  <body>
+    <div id="loading" class="loading">
+      <Loading />
+    </div>
+    <div id="main">
+      <slot />
+    </div>
+
+    <script>
+      addEventListener('load', () => {
+        const loadingEl = document.getElementById('loading');
+        const mainEl = document.getElementById('main');
+        if (loadingEl) {
+          loadingEl.classList.add('load-completed');
+        }
+        if (mainEl) {
+          mainEl.classList.add('loaded-contents');
+        }
+      });
+    </script>
   </body>
 </html>

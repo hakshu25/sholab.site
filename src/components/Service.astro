@@ -7,7 +7,14 @@ const { imgSrc, imgAlt, title, description } = Astro.props;
 ---
 
 <div class="container">
-  <img src={imgSrc} alt={imgAlt} width="320" height="276" loading="lazy" />
+  <img
+    src={imgSrc}
+    alt={imgAlt}
+    width="320"
+    height="276"
+    loading="lazy"
+    decoding="async"
+  />
   <div class="service">
     <h3 class="title">{title}</h3>
     <p>
