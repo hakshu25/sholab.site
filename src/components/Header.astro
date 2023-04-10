@@ -1,11 +1,17 @@
 ---
 import { Icon } from 'astro-icon';
-import Logo from './Logo.astro';
 ---
 
 <header class="nav-header">
   <div class="menu-icons">
-    <Logo width={120} height={120} />
+    <picture>
+      <source
+        srcset="/assets/logo_50x50.png"
+        type="image/png"
+        media="(max-width: 640px)"
+      />
+      <img src="/assets/logo_70x70.png" alt="翔ラボのロゴ" />
+    </picture>
     <button id="menu-button" class="menu-button"
       ><Icon name="tabler:menu-2" /></button
     >
@@ -92,7 +98,7 @@ import Logo from './Logo.astro';
 
     .menu-button {
       display: block;
-      width: 60px;
+      width: 50px;
       border: none;
       background-color: transparent;
       cursor: pointer;
