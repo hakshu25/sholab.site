@@ -1,12 +1,8 @@
 ---
+import type { WorkInfo } from '../common/types';
 import ExternalLink from './ExternalLink.astro';
 
-interface Props {
-  link: string;
-  imgName: string;
-  imgAlt: string;
-  title: string;
-}
+type Props = WorkInfo;
 
 const { link, imgName, imgAlt, title } = Astro.props;
 ---

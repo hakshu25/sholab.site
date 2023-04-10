@@ -1,12 +1,6 @@
 ---
+import type { WorkInfo } from '../common/types';
 import Work from './Work.astro';
-
-interface WorkInfo {
-  link: string;
-  imgName: string;
-  imgAlt: string;
-  title: string;
-}
 
 const workList: WorkInfo[] = [
   {

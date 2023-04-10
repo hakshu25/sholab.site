@@ -1,10 +1,7 @@
 ---
-interface Props {
-  imgSrc: string;
-  imgAlt: string;
-  title: string;
-  description: string;
-}
+import type { ServiceInfo } from '../common/types';
+
+type Props = ServiceInfo;
 
 const { imgSrc, imgAlt, title, description } = Astro.props;
 ---
