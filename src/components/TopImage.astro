@@ -9,6 +9,18 @@
 </div>
 
 <style>
+  @keyframes fadein-bottom {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .container {
     width: 100%;
     height: calc(100vh - 80px);
@@ -25,6 +37,7 @@
     text-align: left;
     padding-left: 24px;
     text-shadow: 4px 3px 3px rgb(255 255 255 / 80%);
+    animation: fadein-bottom 1.5s ease-out;
   }
 
   .sub-phrase {
