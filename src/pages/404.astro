@@ -1,8 +1,36 @@
 ---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout
-  title="Not Found"
-  description="404 Error — this page was not found"
-/>
+<BaseLayout title="Not Found" description="404 Error — this page was not found">
+  <Header />
+  <main>
+    <section class="messages">
+      <h3>お探しのページは見つかりませんでした。</h3>
+      <a href="/" class="link">トップページへ戻る</a>
+    </section>
+  </main>
+  <div class="footer">
+    <Footer />
+  </div>
+</BaseLayout>
+
+<style>
+  .messages {
+    margin: 50px 10px;
+    text-align: center;
+  }
+
+  .link {
+    display: block;
+    margin-top: 30px;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+</style>

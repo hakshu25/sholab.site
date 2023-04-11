@@ -12,13 +12,21 @@ import { Icon } from 'astro-icon';
       />
       <img src="/assets/logo_70x70.png" alt="翔ラボのロゴ" />
     </picture>
-    <button id="menu-button" class="menu-button" aria-label="menu button"
-      ><Icon name="tabler:menu-2" /></button
-    >
+    {
+      Astro.slots.has('header-link') && (
+        <button id="menu-button" class="menu-button" aria-label="menu button">
+          <Icon name="tabler:menu-2" />
+        </button>
+      )
+    }
   </div>
-  <nav id="menu" class="nav-items">
-    <slot />
-  </nav>
+  {
+    Astro.slots.has('header-link') && (
+      <nav id="menu" class="nav-items">
+        <slot name="header-link" />
+      </nav>
+    )
+  }
 </header>
 
 <style>
