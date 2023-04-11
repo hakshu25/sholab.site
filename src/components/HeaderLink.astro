@@ -13,13 +13,13 @@ const { href } = Astro.props;
     padding: 10px;
     list-style: none;
     text-decoration: none;
-    color: #3d4663;
+    color: var(--text-color);
   }
 
   @media screen and (width <= 640px) {
     .link {
       padding: 20px;
-      border-top: 1px solid rgb(0 0 0 / 10%);
+      border-top: 1px solid var(--border-color);
     }
   }
 </style>
