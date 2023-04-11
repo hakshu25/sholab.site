@@ -14,12 +14,12 @@ import HeaderLink from '../components/HeaderLink.astro';
 
 <BaseLayout>
   <Header>
-    <HeaderLink href="#about">About</HeaderLink>
-    <HeaderLink href="#experience">Experience</HeaderLink>
-    <HeaderLink href="#skills">Skills</HeaderLink>
-    <HeaderLink href="#services">Services</HeaderLink>
-    <HeaderLink href="#works">Works</HeaderLink>
-    <HeaderLink href="#contact">Contact</HeaderLink>
+    <HeaderLink href="#about" slot="header-link">About</HeaderLink>
+    <HeaderLink href="#experience" slot="header-link">Experience</HeaderLink>
+    <HeaderLink href="#skills" slot="header-link">Skills</HeaderLink>
+    <HeaderLink href="#services" slot="header-link">Services</HeaderLink>
+    <HeaderLink href="#works" slot="header-link">Works</HeaderLink>
+    <HeaderLink href="#contact" slot="header-link">Contact</HeaderLink>
   </Header>
   <main>
     <TopImage />
