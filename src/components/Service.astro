@@ -43,7 +43,7 @@ const { imgSrc, imgAlt, title, description } = Astro.props;
     text-decoration-skip-ink: none;
   }
 
-  @media (width <= 768px) {
+  @media screen and (max-width: 768px) {
     .container {
       flex-direction: column;
     }
