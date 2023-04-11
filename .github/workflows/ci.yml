@@ -28,3 +28,4 @@ jobs:
       - run: pnpm eslint
       - run: pnpm stylelint
       - run: pnpm check:format
+      - run: pnpm lint:html

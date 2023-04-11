@@ -1,16 +1,20 @@
 ---
-interface Props {
-  imgSrc: string;
-  imgAlt: string;
-  title: string;
-  description: string;
-}
+import type { ServiceInfo } from '../common/types';
+
+type Props = ServiceInfo;
 
 const { imgSrc, imgAlt, title, description } = Astro.props;
 ---
 
 <div class="container">
-  <img src={imgSrc} alt={imgAlt} width="320" height="276" loading="lazy" />
+  <img
+    src={imgSrc}
+    alt={imgAlt}
+    width="320"
+    height="276"
+    loading="lazy"
+    decoding="async"
+  />
   <div class="service">
     <h3 class="title">{title}</h3>
     <p>
@@ -50,11 +54,11 @@ const { imgSrc, imgAlt, title, description } = Astro.props;
     }
 
     .service > p {
-      font-size: 1.2rem;
+      font-size: var(--text-lg);
     }
 
     .title {
-      font-size: 1.6rem;
+      font-size: var(--text-xl);
     }
 
     .image {

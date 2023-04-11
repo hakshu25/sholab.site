@@ -1,6 +1,5 @@
 ---
 import ExternalLink from './ExternalLink.astro';
-import Icon from './Icon.astro';
 const currentYear = new Date().getFullYear();
 ---
 
@@ -10,7 +9,6 @@ const currentYear = new Date().getFullYear();
       Developed with <ExternalLink link="https://astro.build/">
         Astro
       </ExternalLink>
-      <Icon icon="rocket-launch" size="1.2em" />
     </p>
     <p>&copy; {currentYear} 翔ラボ</p>
   </div>
@@ -29,15 +27,15 @@ const currentYear = new Date().getFullYear();
     margin-top: auto;
     padding: 3rem 2rem;
     text-align: center;
-    color: var(--gray-400);
+    color: var(--gray);
     font-size: var(--text-sm);
   }
 
   footer a {
-    color: var(--gray-400);
+    color: var(--gray);
     text-decoration: 1px solid underline transparent;
     text-underline-offset: 0.25em;
-    transition: text-decoration-color var(--theme-transition);
+    transition: text-decoration-color 0.2s ease-in-out;
   }
 
   footer a:hover,

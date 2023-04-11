@@ -1,12 +1,8 @@
 ---
+import type { ServiceInfo } from '../common/types';
 import Service from './Service.astro';
 
-const serviceList: {
-  imgSrc: string;
-  imgAlt: string;
-  title: string;
-  description: string;
-}[] = [
+const serviceList: ServiceInfo[] = [
   {
     imgSrc: '/assets/services/service-html.png',
     imgAlt: 'HTML/CSSのコード',

@@ -1,5 +1,4 @@
 ---
-// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import TopImage from '../components/TopImage.astro';
@@ -10,10 +9,18 @@ import Services from '../components/Services.astro';
 import Works from '../components/Works.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
+import HeaderLink from '../components/HeaderLink.astro';
 ---
 
 <BaseLayout>
-  <Header />
+  <Header>
+    <HeaderLink href="#about">About</HeaderLink>
+    <HeaderLink href="#experience">Experience</HeaderLink>
+    <HeaderLink href="#skills">Skills</HeaderLink>
+    <HeaderLink href="#services">Services</HeaderLink>
+    <HeaderLink href="#works">Works</HeaderLink>
+    <HeaderLink href="#contact">Contact</HeaderLink>
+  </Header>
   <main>
     <TopImage />
     <div class="info-container">

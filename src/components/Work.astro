@@ -1,12 +1,8 @@
 ---
+import type { WorkInfo } from '../common/types';
 import ExternalLink from './ExternalLink.astro';
 
-interface Props {
-  link: string;
-  imgName: string;
-  imgAlt: string;
-  title: string;
-}
+type Props = WorkInfo;
 
 const { link, imgName, imgAlt, title } = Astro.props;
 ---
@@ -14,17 +10,19 @@ const { link, imgName, imgAlt, title } = Astro.props;
 <ExternalLink link={link}>
   <div class="card">
     <picture>
-      <src
+      <source
         srcset={`assets/works/${imgName}-sm.png`}
         type="image/png"
-        media="(max-width: 640px)"></src>
+        media="(max-width: 640px)"
+      />
+      <img
+        src={`assets/works/${imgName}-md.png`}
+        class="image"
+        alt={imgAlt}
+        loading="lazy"
+        decoding="async"
+      />
     </picture>
-    <img
-      src={`assets/works/${imgName}-md.png`}
-      class="image"
-      alt={imgAlt}
-      loading="lazy"
-    />
     <h5 class="title">{title}</h5>
   </div>
 </ExternalLink>
@@ -52,8 +50,8 @@ const { link, imgName, imgAlt, title } = Astro.props;
 
   @media (width <= 640px) {
     .card {
-      width: 240px;
-      height: 200px;
+      width: 200px;
+      height: 190px;
     }
   }
 </style>
