@@ -6,14 +6,23 @@ interface Props {
   description?: string | undefined;
 }
 
-const { title = '翔ラボ', description = 'The portfolio site of 翔ラボ' } =
-  Astro.props;
+const {
+  title = '翔ラボ',
+  description = 'フリーランスWebエンジニア翔ラボのポートフォリオサイト',
+} = Astro.props;
 ---
 
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" property="og:description" content={description} />
+    <meta property="og:image" content="/assets/logo_180x180.png" />
+    <meta property="og:url" content="https://sholab.net" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="翔ラボポートフォリオ" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://sholab.net" />
+    <meta property="twitter:site" content="@fly_highup_air" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
