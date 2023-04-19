@@ -19,6 +19,8 @@
   ],
   "excludeFiles": [
     "./src/components/Header.astro",
-    "./src/components/Icon.astro"
+    "./src/components/Icon.astro",
+    "./src/components/Ga.astro",
+    "./src/layouts/BaseLayout.astro"
   ]
 }
