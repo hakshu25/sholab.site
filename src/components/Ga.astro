@@ -1,0 +1,18 @@
+---
+const analyticsId = import.meta.env.PUBLIC_GA_ID;
+---
+
+<!-- Google tag (gtag.js) -->
+<script
+  type="text/partytown"
+  src={`https://www.googletagmanager.com/gtag/js?id=${analyticsId}`}
+></script>
+<script type="text/partytown" data-ga-id={analyticsId}>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', document.currentScript.dataset.gaId);
+</script>
