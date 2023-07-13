@@ -1,4 +1,22 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>hakshu25/renovate-config"]
+  "extends": ["github>hakshu25/renovate-config"],
+  "packageRules": [
+    {
+      "groupName": "eslint packages",
+      "matchPackagePatterns": ["^eslint", "^@typescript-eslint/"]
+    },
+    {
+      "groupName": "markuplint packages",
+      "matchPackagePatterns": ["markuplint"]
+    },
+    {
+      "groupName": "stylelint packages",
+      "matchPackagePatterns": ["^stylelint"]
+    },
+    {
+      "groupName": "prettier packages",
+      "matchPackagePatterns": ["^prettier"]
+    }
+  ]
 }
