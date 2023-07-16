@@ -13,7 +13,8 @@
   "extends": [
     "plugin:astro/recommended",
     "plugin:astro/jsx-a11y-strict",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/stylistic"
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
