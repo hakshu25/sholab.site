@@ -53,8 +53,8 @@ devDependencies:
     specifier: ^1.5.0
     version: 1.5.0
   prettier:
-    specifier: ^2.8.7
-    version: 2.8.7
+    specifier: ^3.0.2
+    version: 3.0.2
   prettier-plugin-astro:
     specifier: ^0.11.0
     version: 0.11.0
@@ -93,7 +93,7 @@ packages:
     dependencies:
       '@vscode/emmet-helper': 2.9.2
       events: 3.3.0
-      prettier: 2.8.7
+      prettier: 2.8.8
       prettier-plugin-astro: 0.7.2
       source-map: 0.7.4
       vscode-css-languageservice: 6.2.6
@@ -781,7 +781,7 @@ packages:
     dependencies:
       '@markuplint/ml-core': 3.7.0
       glob: 8.1.0
-      prettier: 2.8.7
+      prettier: 2.8.8
       tslib: 2.6.1
       typescript: 4.9.5
     transitivePeerDependencies:
@@ -812,7 +812,7 @@ packages:
       '@markuplint/ml-ast': 3.2.0
       '@markuplint/parser-utils': 3.10.0
       parse5: 7.1.2
-      tslib: 2.6.1
+      tslib: 2.6.2
       type-fest: 3.13.1
     transitivePeerDependencies:
       - supports-color
@@ -914,7 +914,7 @@ packages:
       '@types/debug': 4.1.8
       debug: 4.3.4
       is-plain-object: 5.0.0
-      tslib: 2.6.1
+      tslib: 2.6.2
       type-fest: 3.13.1
     transitivePeerDependencies:
       - supports-color
@@ -946,7 +946,7 @@ packages:
       '@markuplint/types': 3.9.0
       dom-accessibility-api: 0.6.1
       is-plain-object: 5.0.0
-      tslib: 2.6.1
+      tslib: 2.6.2
       type-fest: 3.13.1
     transitivePeerDependencies:
       - supports-color
@@ -967,7 +967,7 @@ packages:
       '@markuplint/ml-ast': 3.2.0
       '@markuplint/types': 3.9.0
       '@types/uuid': 9.0.2
-      tslib: 2.6.1
+      tslib: 2.6.2
       type-fest: 3.13.1
       uuid: 9.0.0
     transitivePeerDependencies:
@@ -1027,7 +1027,7 @@ packages:
       '@types/debug': 4.1.8
       debug: 4.3.4
       postcss-selector-parser: 6.0.13
-      tslib: 2.6.1
+      tslib: 2.6.2
       type-fest: 3.13.1
     transitivePeerDependencies:
       - supports-color
@@ -4863,13 +4863,13 @@ packages:
     engines: {node: ^14.15.0 || >=16.0.0, pnpm: '>=7.14.0'}
     dependencies:
       '@astrojs/compiler': 0.31.4
-      prettier: 2.8.7
+      prettier: 2.8.8
       sass-formatter: 0.7.7
       synckit: 0.8.5
     dev: false
 
-  /prettier@2.8.7:
-    resolution: {integrity: sha512-yPngTo3aXUUmyuTjeTUT75txrf+aMh9FiD7q9ZE/i6r0bPb22g4FsE6Y338PQX1bmfy08i9QQCB7/rcUAVntfw==}
+  /prettier@2.8.8:
+    resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
     engines: {node: '>=10.13.0'}
     hasBin: true
 
@@ -5722,6 +5722,10 @@ packages:
 
   /tslib@2.6.1:
     resolution: {integrity: sha512-t0hLfiEKfMUoqhG+U1oid7Pva4bbDPHYfJNiB7BiIjRkj1pyC++4N3huJfqY6aRH6VTB0rvtzQwjM4K6qpfOig==}
+
+  /tslib@2.6.2:
+    resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
+    dev: true
 
   /type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
