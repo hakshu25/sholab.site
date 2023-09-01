@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@astrojs/partytown':
-    specifier: ^1.2.0
-    version: 1.2.3
+    specifier: ^2.0.0
+    version: 2.0.0
   astro:
     specifier: ^2.1.7
     version: 2.10.15(@types/node@20.5.7)
@@ -144,10 +144,10 @@ packages:
       magic-string: 0.25.9
     dev: true
 
-  /@astrojs/partytown@1.2.3:
-    resolution: {integrity: sha512-EYdeFfSEe5RTQsz+6Mxb9JLJWztZEOw0yjAxoDbntCdTkxDCnIwqRAhUwftx+zWsh+JIw1hOkLRNN8QOmwBiqA==}
+  /@astrojs/partytown@2.0.0:
+    resolution: {integrity: sha512-WKyWs3TdxAG4b0+vkMWwDProatsikfvpjJQ+IIDEI7QvPBmdIbD9BDfuGgKIETnmkA1DxFj9G3jiGn2DGiJKzg==}
     dependencies:
-      '@builder.io/partytown': 0.7.6
+      '@builder.io/partytown': 0.8.0
       mrmime: 1.0.1
     dev: false
 
@@ -411,8 +411,8 @@ packages:
       to-fast-properties: 2.0.0
     dev: false
 
-  /@builder.io/partytown@0.7.6:
-    resolution: {integrity: sha512-snXIGNiZpqjno3XYQN2lbBB+05hsQR/LSttbtIW1c0gmZ7Kh/DIo0YrxlDxCDulAMFPFM8J+4voLwvYepSj3sw==}
+  /@builder.io/partytown@0.8.0:
+    resolution: {integrity: sha512-M6H7nSMwW2dHd1/MQ+9J1Jqdw22uhl1nKv90kIiL9G7gjFVqqouQp4qSS1oZclmtW1XjAa4Q5UnbHB4iytmxZA==}
     hasBin: true
     dev: false
 
