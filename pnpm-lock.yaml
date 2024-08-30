@@ -7,10 +7,10 @@ settings:
 dependencies:
   '@astrojs/partytown':
     specifier: ^2.0.0
-    version: 2.1.1
+    version: 2.1.2
   astro:
     specifier: ^3.0.0
-    version: 3.4.4(@types/node@22.4.0)(typescript@5.5.4)
+    version: 3.4.4(@types/node@22.5.1)(typescript@5.5.4)
   astro-icon:
     specifier: ^0.8.0
     version: 0.8.2
@@ -48,7 +48,7 @@ devDependencies:
     version: 15.2.9
   markuplint:
     specifier: ^3.7.0
-    version: 3.15.0(@types/node@22.4.0)(typescript@5.5.4)
+    version: 3.15.0(@types/node@22.5.1)(typescript@5.5.4)
   postcss-html:
     specifier: ^1.5.0
     version: 1.7.0
@@ -98,7 +98,7 @@ packages:
       astro: ^3.3.0
     dependencies:
       '@astrojs/prism': 3.0.0
-      astro: 3.4.4(@types/node@22.4.0)(typescript@5.5.4)
+      astro: 3.4.4(@types/node@22.5.1)(typescript@5.5.4)
       github-slugger: 2.0.0
       import-meta-resolve: 3.1.1
       mdast-util-definitions: 6.0.0
@@ -127,8 +127,8 @@ packages:
       magic-string: 0.25.9
     dev: true
 
-  /@astrojs/partytown@2.1.1:
-    resolution: {integrity: sha512-KvecQuGGgrDrdTjC5awmtoQXqJFinChfeizKBJyr7F5EGQPx62xq8SIWkcXamLr5xZyNw0lryKeLtIzbxRH/zw==}
+  /@astrojs/partytown@2.1.2:
+    resolution: {integrity: sha512-1a9T5lqxtnrw0qLPo1KwliUvaaUzPNPtWucD8VxdwT7zqcpODFk1RzGgAgqVo+YhutFrTu/qclbtnOfXBuskjw==}
     dependencies:
       '@builder.io/partytown': 0.10.2
       mrmime: 2.0.0
@@ -968,13 +968,13 @@ packages:
     resolution: {integrity: sha512-tZ4hwilGWec+EzUs0W1Hr4VyNMR10vH2lorPKuWvQVLntjZ6BKsL9fF2AYb/XnoQWc3Xbt8/nhhgxgOlVNasGA==}
     dev: true
 
-  /@markuplint/create-rule-helper@3.15.0(@types/node@22.4.0):
+  /@markuplint/create-rule-helper@3.15.0(@types/node@22.5.1):
     resolution: {integrity: sha512-p1APXz5fMRxPZQKPy/Ht2jiIYzrnb+Pp/k1JU6TsbdcAPg9MlQ+mq676c+R8sYhSzPZ30YBqAPaD4eSWxyhjsg==}
     dependencies:
       '@markuplint/ml-core': 3.15.0
       glob: 10.3.10
       prettier: 2.8.8
-      ts-node: 10.9.2(@types/node@22.4.0)(typescript@5.3.3)
+      ts-node: 10.9.2(@types/node@22.5.1)(typescript@5.3.3)
       tslib: 2.6.2
       typescript: 5.3.3
     transitivePeerDependencies:
@@ -984,7 +984,7 @@ packages:
       - supports-color
     dev: true
 
-  /@markuplint/file-resolver@3.15.0(@types/node@22.4.0)(typescript@5.5.4):
+  /@markuplint/file-resolver@3.15.0(@types/node@22.5.1)(typescript@5.5.4):
     resolution: {integrity: sha512-WCHZuLoZIvJz7+X3Hq4De8VcXeZtJL9PYwvplr+4uZDxChE6gj9/TyQIYVkWyfYC5d3YSvPWGPHYXfLfrGLxSg==}
     dependencies:
       '@markuplint/html-parser': 3.13.0
@@ -996,7 +996,7 @@ packages:
       '@markuplint/selector': 3.14.0
       '@markuplint/shared': 3.8.0
       cosmiconfig: 8.3.6(typescript@5.5.4)
-      cosmiconfig-typescript-loader: 5.0.0(@types/node@22.4.0)(cosmiconfig@8.3.6)(typescript@5.5.4)
+      cosmiconfig-typescript-loader: 5.0.0(@types/node@22.5.1)(cosmiconfig@8.3.6)(typescript@5.5.4)
       glob: 10.3.10
       ignore: 5.3.2
       jsonc: 2.0.0
@@ -1318,10 +1318,10 @@ packages:
     resolution: {integrity: sha512-fAtCfv4jJg+ExtXhvCkCqUKZ+4ok/JQk01qDKhL5BDDoS3AxKXhV5/MAVUZyQnSEd2GT92fkgZl0pz0Q0AzcIQ==}
     dev: true
 
-  /@types/node@22.4.0:
-    resolution: {integrity: sha512-49AbMDwYUz7EXxKU/r7mXOsxwFr4BYbvB7tWYxVuLdb2ibd30ijjXINSMAHiEEZk5PCRBmW1gUeisn2VMKt3cQ==}
+  /@types/node@22.5.1:
+    resolution: {integrity: sha512-KkHsxej0j9IW1KKOOAA/XBA0z08UFSrRQHErzEfA3Vgq57eXIMYboIlHJuYIfd+lwCQjtKqUu3UnmKbtUc9yRw==}
     dependencies:
-      undici-types: 6.19.6
+      undici-types: 6.19.8
 
   /@types/normalize-package-data@2.4.4:
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -1745,7 +1745,7 @@ packages:
       svgo: 2.8.0
     dev: false
 
-  /astro@3.4.4(@types/node@22.4.0)(typescript@5.5.4):
+  /astro@3.4.4(@types/node@22.5.1)(typescript@5.5.4):
     resolution: {integrity: sha512-Xyhif8RtKpNLo/TXN0Klxt0uq/2xNzbJ1tZ2udn/QguT9a6iGeO+N1iRSU5a4FrZNKb5jyg7koLpwfEVJjj7cw==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
@@ -1803,7 +1803,7 @@ packages:
       tsconfck: 3.0.2(typescript@5.5.4)
       unist-util-visit: 4.1.2
       vfile: 5.3.7
-      vite: 4.5.2(@types/node@22.4.0)
+      vite: 4.5.2(@types/node@22.5.1)
       vitefu: 0.2.5(vite@4.5.2)
       which-pm: 2.1.1
       yargs-parser: 21.1.1
@@ -1880,8 +1880,8 @@ packages:
     dev: false
     optional: true
 
-  /bare-fs@2.3.1:
-    resolution: {integrity: sha512-W/Hfxc/6VehXlsgFtbB5B4xFcsCl+pAh30cYhoFyXErf6oGrwjh8SwiPAdHgpmWonKuYpZgGywN0SXt7dgsADA==}
+  /bare-fs@2.3.3:
+    resolution: {integrity: sha512-7RYKL+vZVCyAsMLi5SPu7QGauGGT8avnP/HO571ndEuV4MYdGXvLhtW67FuLPeEI8EiIY7zbbRR9x7x7HU0kgw==}
     requiresBuild: true
     dependencies:
       bare-events: 2.2.0
@@ -2241,7 +2241,7 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-  /cosmiconfig-typescript-loader@5.0.0(@types/node@22.4.0)(cosmiconfig@8.3.6)(typescript@5.5.4):
+  /cosmiconfig-typescript-loader@5.0.0(@types/node@22.5.1)(cosmiconfig@8.3.6)(typescript@5.5.4):
     resolution: {integrity: sha512-+8cK7jRAReYkMwMiG+bxhcNKiHJDM6bR9FD/nGBXOWdMLuYawjF5cGrtLilJ+LGd3ZjCXnJjR5DkfWPoIVlqJA==}
     engines: {node: '>=v16'}
     peerDependencies:
@@ -2249,7 +2249,7 @@ packages:
       cosmiconfig: '>=8.2'
       typescript: '>=4'
     dependencies:
-      '@types/node': 22.4.0
+      '@types/node': 22.5.1
       cosmiconfig: 8.3.6(typescript@5.5.4)
       jiti: 1.21.0
       typescript: 5.5.4
@@ -4491,12 +4491,12 @@ packages:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
     dev: false
 
-  /markuplint@3.15.0(@types/node@22.4.0)(typescript@5.5.4):
+  /markuplint@3.15.0(@types/node@22.5.1)(typescript@5.5.4):
     resolution: {integrity: sha512-id1RZeZVhVcJCrANtFaEmgbAvJOtHSj9wE9qVB3utP6Sf7u7KGYGLphvGSqdwCcWYbnlvZ0WmJnccJlrH8S6FQ==}
     hasBin: true
     dependencies:
-      '@markuplint/create-rule-helper': 3.15.0(@types/node@22.4.0)
-      '@markuplint/file-resolver': 3.15.0(@types/node@22.4.0)(typescript@5.5.4)
+      '@markuplint/create-rule-helper': 3.15.0(@types/node@22.5.1)
+      '@markuplint/file-resolver': 3.15.0(@types/node@22.5.1)(typescript@5.5.4)
       '@markuplint/html-parser': 3.13.0
       '@markuplint/html-spec': 3.14.0
       '@markuplint/i18n': 3.12.0
@@ -6575,7 +6575,7 @@ packages:
       pump: 3.0.0
       tar-stream: 3.1.7
     optionalDependencies:
-      bare-fs: 2.3.1
+      bare-fs: 2.3.3
       bare-path: 2.1.3
     dev: false
     optional: true
@@ -6659,7 +6659,7 @@ packages:
       typescript: 5.5.4
     dev: true
 
-  /ts-node@10.9.2(@types/node@22.4.0)(typescript@5.3.3):
+  /ts-node@10.9.2(@types/node@22.5.1)(typescript@5.3.3):
     resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
     hasBin: true
     peerDependencies:
@@ -6678,7 +6678,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 22.4.0
+      '@types/node': 22.5.1
       acorn: 8.11.3
       acorn-walk: 8.3.2
       arg: 4.1.3
@@ -6834,8 +6834,8 @@ packages:
       which-boxed-primitive: 1.0.2
     dev: true
 
-  /undici-types@6.19.6:
-    resolution: {integrity: sha512-e/vggGopEfTKSvj4ihnOLTsqhrKRN3LeO6qSN/GxohhuRv8qH9bNQ4B8W7e/vFL+0XTnmHPB4/kegunZGA4Org==}
+  /undici-types@6.19.8:
+    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
 
   /unherit@3.0.1:
     resolution: {integrity: sha512-akOOQ/Yln8a2sgcLj4U0Jmx0R5jpIg2IUyRrWOzmEbjBtGzBdHtSeFKgoEcoH4KYIG/Pb8GQ/BwtYm0GCq1Sqg==}
@@ -7028,7 +7028,7 @@ packages:
       vfile-message: 4.0.2
     dev: false
 
-  /vite@4.5.2(@types/node@22.4.0):
+  /vite@4.5.2(@types/node@22.5.1):
     resolution: {integrity: sha512-tBCZBNSBbHQkaGyhGCDUGqeo2ph8Fstyp6FMSvTtsXeZSPpSMGlviAOav2hxVTqFcx8Hj/twtWKsMJXNY0xI8w==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -7056,7 +7056,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 22.4.0
+      '@types/node': 22.5.1
       esbuild: 0.18.20
       postcss: 8.4.41
       rollup: 3.29.4
@@ -7072,7 +7072,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.5.2(@types/node@22.4.0)
+      vite: 4.5.2(@types/node@22.5.1)
     dev: false
 
   /web-namespaces@2.0.1:
