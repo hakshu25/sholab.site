@@ -10,7 +10,7 @@ dependencies:
     version: 2.1.2
   astro:
     specifier: ^3.0.0
-    version: 3.6.5(@types/node@22.7.6)(typescript@5.6.3)
+    version: 3.6.5(@types/node@22.7.7)(typescript@5.6.3)
   astro-icon:
     specifier: ^0.8.0
     version: 0.8.2
@@ -24,7 +24,7 @@ devDependencies:
     version: 3.12.0
   '@types/lodash':
     specifier: ^4.14.192
-    version: 4.17.11
+    version: 4.17.12
   '@typescript-eslint/eslint-plugin':
     specifier: ^7.0.0
     version: 7.18.0(@typescript-eslint/parser@7.18.0)(eslint@8.57.1)(typescript@5.6.3)
@@ -48,7 +48,7 @@ devDependencies:
     version: 15.2.10
   markuplint:
     specifier: ^3.7.0
-    version: 3.15.0(@types/node@22.7.6)(typescript@5.6.3)
+    version: 3.15.0(@types/node@22.7.7)(typescript@5.6.3)
   postcss-html:
     specifier: ^1.5.0
     version: 1.7.0
@@ -88,7 +88,7 @@ packages:
       astro: ^3.0.0
     dependencies:
       '@astrojs/prism': 3.1.0
-      astro: 3.6.5(@types/node@22.7.6)(typescript@5.6.3)
+      astro: 3.6.5(@types/node@22.7.7)(typescript@5.6.3)
       github-slugger: 2.0.0
       import-meta-resolve: 3.1.1
       mdast-util-definitions: 6.0.0
@@ -940,13 +940,13 @@ packages:
     resolution: {integrity: sha512-tZ4hwilGWec+EzUs0W1Hr4VyNMR10vH2lorPKuWvQVLntjZ6BKsL9fF2AYb/XnoQWc3Xbt8/nhhgxgOlVNasGA==}
     dev: true
 
-  /@markuplint/create-rule-helper@3.15.0(@types/node@22.7.6):
+  /@markuplint/create-rule-helper@3.15.0(@types/node@22.7.7):
     resolution: {integrity: sha512-p1APXz5fMRxPZQKPy/Ht2jiIYzrnb+Pp/k1JU6TsbdcAPg9MlQ+mq676c+R8sYhSzPZ30YBqAPaD4eSWxyhjsg==}
     dependencies:
       '@markuplint/ml-core': 3.15.0
       glob: 10.4.5
       prettier: 2.8.8
-      ts-node: 10.9.2(@types/node@22.7.6)(typescript@5.6.2)
+      ts-node: 10.9.2(@types/node@22.7.7)(typescript@5.6.2)
       tslib: 2.7.0
       typescript: 5.6.2
     transitivePeerDependencies:
@@ -956,7 +956,7 @@ packages:
       - supports-color
     dev: true
 
-  /@markuplint/file-resolver@3.15.0(@types/node@22.7.6)(typescript@5.6.3):
+  /@markuplint/file-resolver@3.15.0(@types/node@22.7.7)(typescript@5.6.3):
     resolution: {integrity: sha512-WCHZuLoZIvJz7+X3Hq4De8VcXeZtJL9PYwvplr+4uZDxChE6gj9/TyQIYVkWyfYC5d3YSvPWGPHYXfLfrGLxSg==}
     dependencies:
       '@markuplint/html-parser': 3.13.0
@@ -968,7 +968,7 @@ packages:
       '@markuplint/selector': 3.14.0
       '@markuplint/shared': 3.8.0
       cosmiconfig: 8.3.6(typescript@5.6.3)
-      cosmiconfig-typescript-loader: 5.0.0(@types/node@22.7.6)(cosmiconfig@8.3.6)(typescript@5.6.3)
+      cosmiconfig-typescript-loader: 5.0.0(@types/node@22.7.7)(cosmiconfig@8.3.6)(typescript@5.6.3)
       glob: 10.4.5
       ignore: 5.3.2
       jsonc: 2.0.0
@@ -1246,8 +1246,8 @@ packages:
       '@types/unist': 3.0.3
     dev: false
 
-  /@types/lodash@4.17.11:
-    resolution: {integrity: sha512-jzqWo/uQP/iqeGGTjhgFp2yaCrCYTauASQcpdzESNCkHjSprBJVcZP9KG9aQ0q+xcsXiKd/iuw/4dLjS3Odc7Q==}
+  /@types/lodash@4.17.12:
+    resolution: {integrity: sha512-sviUmCE8AYdaF/KIHLDJBQgeYzPBI0vf/17NaYehBJfYD1j6/L95Slh07NlyK2iNyBNaEkb3En2jRt+a8y3xZQ==}
     dev: true
 
   /@types/mdast@3.0.15:
@@ -1290,8 +1290,8 @@ packages:
     resolution: {integrity: sha512-fAtCfv4jJg+ExtXhvCkCqUKZ+4ok/JQk01qDKhL5BDDoS3AxKXhV5/MAVUZyQnSEd2GT92fkgZl0pz0Q0AzcIQ==}
     dev: true
 
-  /@types/node@22.7.6:
-    resolution: {integrity: sha512-/d7Rnj0/ExXDMcioS78/kf1lMzYk4BZV8MZGTBKzTGZ6/406ukkbYlIsZmMPhcR5KlkunDHQLrtAVmSq7r+mSw==}
+  /@types/node@22.7.7:
+    resolution: {integrity: sha512-SRxCrrg9CL/y54aiMCG3edPKdprgMVGDXjA3gB8UmmBW5TcXzRUYAh8EWzTnSJFAd1rgImPELza+A3bJ+qxz8Q==}
     dependencies:
       undici-types: 6.19.8
 
@@ -1719,7 +1719,7 @@ packages:
       svgo: 2.8.0
     dev: false
 
-  /astro@3.6.5(@types/node@22.7.6)(typescript@5.6.3):
+  /astro@3.6.5(@types/node@22.7.7)(typescript@5.6.3):
     resolution: {integrity: sha512-fyVubQfb6+Bc2/XigXNeJ06HHwNFB9EnAQohJcrja6RB1PhIcZRusyIamywHWjoJ4a1T0HxMkzBLNW96DBqpNw==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
@@ -1777,7 +1777,7 @@ packages:
       tsconfck: 3.1.3(typescript@5.6.3)
       unist-util-visit: 4.1.2
       vfile: 5.3.7
-      vite: 4.5.5(@types/node@22.7.6)
+      vite: 4.5.5(@types/node@22.7.7)
       vitefu: 0.2.5(vite@4.5.5)
       which-pm: 2.2.0
       yargs-parser: 21.1.1
@@ -2208,7 +2208,7 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-  /cosmiconfig-typescript-loader@5.0.0(@types/node@22.7.6)(cosmiconfig@8.3.6)(typescript@5.6.3):
+  /cosmiconfig-typescript-loader@5.0.0(@types/node@22.7.7)(cosmiconfig@8.3.6)(typescript@5.6.3):
     resolution: {integrity: sha512-+8cK7jRAReYkMwMiG+bxhcNKiHJDM6bR9FD/nGBXOWdMLuYawjF5cGrtLilJ+LGd3ZjCXnJjR5DkfWPoIVlqJA==}
     engines: {node: '>=v16'}
     peerDependencies:
@@ -2216,7 +2216,7 @@ packages:
       cosmiconfig: '>=8.2'
       typescript: '>=4'
     dependencies:
-      '@types/node': 22.7.6
+      '@types/node': 22.7.7
       cosmiconfig: 8.3.6(typescript@5.6.3)
       jiti: 1.21.6
       typescript: 5.6.3
@@ -4396,12 +4396,12 @@ packages:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
     dev: false
 
-  /markuplint@3.15.0(@types/node@22.7.6)(typescript@5.6.3):
+  /markuplint@3.15.0(@types/node@22.7.7)(typescript@5.6.3):
     resolution: {integrity: sha512-id1RZeZVhVcJCrANtFaEmgbAvJOtHSj9wE9qVB3utP6Sf7u7KGYGLphvGSqdwCcWYbnlvZ0WmJnccJlrH8S6FQ==}
     hasBin: true
     dependencies:
-      '@markuplint/create-rule-helper': 3.15.0(@types/node@22.7.6)
-      '@markuplint/file-resolver': 3.15.0(@types/node@22.7.6)(typescript@5.6.3)
+      '@markuplint/create-rule-helper': 3.15.0(@types/node@22.7.7)
+      '@markuplint/file-resolver': 3.15.0(@types/node@22.7.7)(typescript@5.6.3)
       '@markuplint/html-parser': 3.13.0
       '@markuplint/html-spec': 3.14.0
       '@markuplint/i18n': 3.12.0
@@ -5889,6 +5889,7 @@ packages:
 
   /safe-buffer@5.2.1:
     resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==}
+    requiresBuild: true
     dev: false
 
   /safe-regex-test@1.0.3:
@@ -6231,6 +6232,7 @@ packages:
 
   /string_decoder@1.3.0:
     resolution: {integrity: sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==}
+    requiresBuild: true
     dependencies:
       safe-buffer: 5.2.1
     dev: false
@@ -6534,7 +6536,7 @@ packages:
       typescript: 5.6.3
     dev: true
 
-  /ts-node@10.9.2(@types/node@22.7.6)(typescript@5.6.2):
+  /ts-node@10.9.2(@types/node@22.7.7)(typescript@5.6.2):
     resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
     hasBin: true
     peerDependencies:
@@ -6553,7 +6555,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 22.7.6
+      '@types/node': 22.7.7
       acorn: 8.12.1
       acorn-walk: 8.3.4
       arg: 4.1.3
@@ -6895,7 +6897,7 @@ packages:
       vfile-message: 4.0.2
     dev: false
 
-  /vite@4.5.5(@types/node@22.7.6):
+  /vite@4.5.5(@types/node@22.7.7):
     resolution: {integrity: sha512-ifW3Lb2sMdX+WU91s3R0FyQlAyLxOzCSCP37ujw0+r5POeHPwe6udWVIElKQq8gk3t7b8rkmvqC6IHBpCff4GQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -6923,7 +6925,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 22.7.6
+      '@types/node': 22.7.7
       esbuild: 0.18.20
       postcss: 8.4.47
       rollup: 3.29.5
@@ -6939,7 +6941,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.5.5(@types/node@22.7.6)
+      vite: 4.5.5(@types/node@22.7.7)
     dev: false
 
   /web-namespaces@2.0.1:
