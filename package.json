@@ -38,7 +38,7 @@
     "prettier": "^3.0.2",
     "prettier-plugin-astro": "^0.14.0",
     "stylelint": "^16.0.0",
-    "stylelint-config-standard": "^36.0.0"
+    "stylelint-config-standard": "^37.0.0"
   },
   "lint-staged": {
     "src/**/*.{astro,ts,tsx}": "eslint --fix",
