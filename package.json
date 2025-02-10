@@ -12,7 +12,7 @@
     "fix:eslint": "eslint 'src/**/*.{astro,ts,tsx}' --fix",
     "format": "prettier 'src/**/*.{astro,ts,md,css}' --write",
     "check:format": "prettier src/**/*.{astro,ts,md,css} --check",
-    "prepare": "husky install",
+    "prepare": "husky",
     "stylelint": "stylelint 'src/**/*.{astro,css}'",
     "fix:stylelint": "stylelint 'src/**/*.{astro,css}' --fix",
     "lint:html": "markuplint 'src/**/*.astro'"
@@ -31,7 +31,7 @@
     "eslint": "^8.37.0",
     "eslint-plugin-astro": "^0.34.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
-    "husky": "^8.0.0",
+    "husky": "^9.0.0",
     "lint-staged": "^15.0.0",
     "markuplint": "^3.7.0",
     "postcss-html": "^1.5.0",
