@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon/components';
 ---
 
 <header class="nav-header">
@@ -93,6 +93,11 @@ import { Icon } from 'astro-icon';
       border: none;
       background-color: transparent;
       cursor: pointer;
+    }
+
+    [data-icon] {
+      width: 30px;
+      height: 30px;
     }
   }
 </style>
