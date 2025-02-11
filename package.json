@@ -15,7 +15,7 @@
     "prepare": "husky",
     "stylelint": "stylelint 'src/**/*.{astro,css}'",
     "fix:stylelint": "stylelint 'src/**/*.{astro,css}' --fix",
-    "lint:html": "markuplint 'src/**/*.astro'"
+    "lint:html": "markuplint 'src/pages/*.astro'"
   },
   "dependencies": {
     "@astrojs/partytown": "^2.0.0",
@@ -25,7 +25,7 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@markuplint/astro-parser": "^3.6.2",
+    "@markuplint/astro-parser": "^4.0.0",
     "@types/lodash": "^4.14.192",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
@@ -34,7 +34,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "husky": "^9.0.0",
     "lint-staged": "^15.0.0",
-    "markuplint": "^3.7.0",
+    "markuplint": "^4.0.0",
     "postcss-html": "^1.5.0",
     "prettier": "^3.0.2",
     "prettier-plugin-astro": "^0.14.0",
