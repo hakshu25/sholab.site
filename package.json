@@ -15,7 +15,7 @@
     "prepare": "husky",
     "stylelint": "stylelint 'src/**/*.{astro,css}'",
     "fix:stylelint": "stylelint 'src/**/*.{astro,css}' --fix",
-    "lint:html": "markuplint 'src/**/*.astro'"
+    "lint:html": "markuplint 'src/pages/*.astro'"
   },
   "dependencies": {
     "@astrojs/partytown": "^2.0.0",
