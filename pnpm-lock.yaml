@@ -13,7 +13,7 @@ importers:
         version: 2.1.4
       '@iconify-json/tabler':
         specifier: ^1.2.16
-        version: 1.2.18
+        version: 1.2.19
       astro:
         specifier: ^5.0.0
         version: 5.7.14(@types/node@22.15.21)(rollup@4.41.0)(typescript@5.8.3)(yaml@2.8.0)
@@ -359,8 +359,8 @@ packages:
     resolution: {integrity: sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==}
     engines: {node: '>=18.18'}
 
-  '@iconify-json/tabler@1.2.18':
-    resolution: {integrity: sha512-W+8qiJhJpb4dmBw3P7JSM9QhGsFG8GIS3BJWAmrJ/92rzK6NPGUOPfGmswoO+/MuPzQV96ColY9lcUktUKv0pg==}
+  '@iconify-json/tabler@1.2.19':
+    resolution: {integrity: sha512-JDeQTQxHD8KE12pAbPVHX1WFVOPq8D0XfRb/LwYHwGwYE0HP9OIjJ//TKxS1Gt++RirYu6Xsx+Jm5LA5KbykoA==}
 
   '@iconify/tools@4.1.2':
     resolution: {integrity: sha512-q6NzLQYEN9zkDfcyBqD3vItHcZw97w/s++3H3TBxUORr57EfHxj6tOW6fyufDjMq+Vl56WXWaPx1csBPYlI5CA==}
@@ -3551,7 +3551,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.2': {}
 
-  '@iconify-json/tabler@1.2.18':
+  '@iconify-json/tabler@1.2.19':
     dependencies:
       '@iconify/types': 2.0.0
 
